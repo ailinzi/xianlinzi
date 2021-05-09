@@ -1,6 +1,14 @@
 This page should provide additional high-level documentation and explanation beyond just `chia -h`.
 
-This is not meant to be comprehensive, because often the `-h` text is clear enough. We recommend fully investigating with the `-h` switch before looking elsewhere.
+This is not meant to be comprehensive, because often the `-h` (help) text is clear enough. We recommend fully investigating with the `-h` switch before looking elsewhere.
+
+If want to know what a command's options are, append `-h` at the end to see options and explanations.
+
+Some examples:
+* `chia -h`
+* `chia plots -h`
+* `chia plots check -h`
+* `chia start -h`
 
 As with the rest of this project, this doc is a work-in-progress. Feel free to browse the [source code](https://github.com/Chia-Network/chia-blockchain/tree/main/chia/cmds) or the [Chia Proof of Space Construction Document](https://www.chia.net/assets/Chia_Proof_of_Space_Construction_v1.1.pdf) for more insight in the meantime.
 
