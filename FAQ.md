@@ -199,10 +199,10 @@ The new consensus uses correlated randomness (an idea introduced in [Proof-of-St
 
 ## Why is my wallet not synced? Why can I not connect to wallet from the GUI?
 In these cases, your wallet database might be corrupt. Try the following steps:
-1. Shut down chia and all chia proceses, check the task manager to see if they are all shut down. Note that this will cancel running plots, so be careful.
+1. Shut down Chia and all Chia processes, check the task manager to see if they are all shut down. _Note that this will cancel running plots_, so be careful.
 2. Restart your computer
-3. Delete the ~/.chia/mainnet/wallet/db folder
-4. Restart chia
+3. Delete the `~/.chia/mainnet/wallet/db` folder
+4. Restart Chia
 
 ## Why do I have a negative balance? Why is my pending transaction not confirming?
 
