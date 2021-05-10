@@ -185,7 +185,7 @@ Copy py-cryptography and its meta-data from the staging directory to your virtua
 
 ```
 cp -R /usr/ports/security/py-cryptography/work-py37/stage/usr/local/lib/python3.7/site-packages/cryptography ${VIRTUAL_ENV}/lib/python3.7/site-packages/cryptography
-cp -R /usr/ports/security/py-cryptography/work-py37/stage/usr/local/lib/python3.7/site-packages/ ${VIRTUAL_ENV}/lib/python3.7/site-packages/cryptography-3.3.2-py3.7.egg-info
+cp -R /usr/ports/security/py-cryptography/work-py37/stage/usr/local/lib/python3.7/site-packages/cryptography-3.3.2-py3.7.egg-info ${VIRTUAL_ENV}/lib/python3.7/site-packages/cryptography-3.3.2-py3.7.egg-info
 ```
 
 Clear any Python byte-code cache files that may contain the old path. These should be re-built by the interpreter but we like a clean environment.
