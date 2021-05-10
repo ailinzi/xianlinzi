@@ -1,4 +1,4 @@
-To install the chia-blockchain, follow the instructions according to your operating system.
+
 After installing, follow the remaining instructions in the [Quick Start Guide](https://github.com/Chia-Network/chia-blockchain/wiki/Quick-Start-Guide) to run the software. You should read the [release notes](https://github.com/Chia-Network/chia-blockchain/releases) and the wiki/repository [FAQ](https://github.com/Chia-Network/chia-blockchain/wiki/FAQ).
 -Network/chia-blockchain/wiki/INSTALL#MacOS) | [Ubuntu](https://github.com/Chia-Network/chia-blockchain/wiki/INSTALL#ubuntudebian) | [CentOS / Red Hat](https://github.com/Chia-Network/chia-blockchain/wiki/INSTALL#centosred-hatfedora) | [WSL2](https://github.com/Chia-Network/chia-blockchain/wiki/INSTALL#WSL2) | [Amazon Linux 2](https://github.com/Chia-Network/chia-blockchain/wiki/INSTALL#amazon-linux-2) | [Other platforms](https://github.com/Chia-Network/chia-blockchain/wiki/INSTALL#other-install-methods-and-environments) |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
