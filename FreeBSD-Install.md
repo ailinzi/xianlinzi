@@ -168,16 +168,16 @@ Once complete switch back to your non-root user if you so optioned. You must now
 
 ### clvm_rs
 
-Build and install the current version of clvm_rs (0.1.6).
+Build and install the current version of clvm_rs (0.1.7).
 
 ```
-git clone http://github.com/Chia-Network/clvm_rs.git --branch 0.1.6
+git clone http://github.com/Chia-Network/clvm_rs.git --branch 0.1.7
 cd clvm_rs
 maturin develop --release
 pip install git+https://github.com/Chia-Network/clvm@use_clvm_rs
 ```
 
-clvm_rs 0.1.6 is now installed in your virtual environment.
+clvm_rs 0.1.7 is now installed in your virtual environment.
 
 ### Install py-cryptography to the venv
 
