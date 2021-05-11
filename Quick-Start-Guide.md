@@ -116,7 +116,7 @@ Ubuntu 20.04 LTS or newer, Amazon Linux 2, and CentOS 7.7 or newer are the
 easiest linux install environments.
 
 UPnP is enabled by default to open port 8444 for incoming connections.
-If this causes issues, you can disable it in config.yaml.
+If this causes issues, you can disable it in `config.yaml`. Or you can run this command: `chia configure -upnp false`
 Some routers may require port forwarding, or enabling UPnP
 in the router's configuration.
 
