@@ -4,7 +4,7 @@
 This doc assumes you know how to use the CLI. Using the CLI is the best way to troubleshoot (and to do everything Chia too). The [Quick Start Guide](https://github.com/Chia-Network/chia-blockchain/wiki/Quick-Start-Guide) and [CLI Commands Reference](https://github.com/Chia-Network/chia-blockchain/wiki/CLI-Commands-Reference) have useful info to get you familiar with the CLI.
 
 ## Where to Find Things
-The file paths for Linux, macOS, and Windows versions of Chia are similar. 
+The file structure for Linux, macOS, and Windows versions of Chia are similar. 
 ```
 /home/user
 ├─ .chia/
@@ -26,11 +26,11 @@ The file paths for Linux, macOS, and Windows versions of Chia are similar.
 
 ### Linux & macOS
 * Chia config: `~/.chia/mainnet/config/config.yaml`
-* Chia log: `~/.chia/mainnet/log/debug.log`
+* Chia logs: `~/.chia/mainnet/log/`
 
 ### Windows
 * Chia config:  `C:\Users\%USERNAME%\.chia\mainnet\config\config.yaml`
-* Chia log:  `C:\Users\%USERNAME%\.chia\mainnet\log\debug.log`
+* Chia logs:  `C:\Users\%USERNAME%\.chia\mainnet\log\`
 
 # Logs
 In `config.yaml` you can set the level of detail for your logs. 
@@ -44,7 +44,7 @@ logging: &id001
     log_stdout: false
 ```
 
-You can run `grep`  (Linux, macOS) or `Select-String` (Windows) to search through your logs for relevant information. 
+You can run `grep`  ([Linux](https://man7.org/linux/man-pages/man1/grep.1.html), [macOS](https://ss64.com/osx/grep.html)) or `Select-String` ([Windows](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/select-string?view=powershell-7.1)) to search through your logs for relevant information. 
 
 # Is It Working?
 
