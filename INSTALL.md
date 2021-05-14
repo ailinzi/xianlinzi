@@ -326,4 +326,4 @@ chia -h
 
 # Testnets
 To join the testnets, we recommend you keep a separate environment by prepending `CHIA_ROOT="~/.chia/testnetx"` to all
-of your cli commands. For example, `CHIA_ROOT="~/.chia/testnet7 chia init`. An easier way to do this, is to just `export CHIA_ROOT="~/.chia/testnet7` so all commands will use testnet7 instead of mainnet.  You should also update all config values to the testnet values, by doing `chia configure -t True`. 
+of your cli commands. For example, `CHIA_ROOT="~/.chia/testnet7 chia init`. An easier way to do this, is to just `export CHIA_ROOT="~/.chia/testnet7"` so all commands will use testnet7 instead of mainnet.  You should also update all config values to the testnet values, by doing `chia configure -t true`. 
