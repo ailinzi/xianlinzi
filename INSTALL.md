@@ -7,7 +7,8 @@ After installing, follow the remaining instructions in the [Quick Start Guide](h
 All keys and plots from version prior to Beta 8 (released July 16, 2020) are deprecated and can be deleted. Plots from both Beta 8 and newer should work on mainnet. 
 
 ## Minimum Specs
-The minimum supported specs are that of the Raspberry Pi 4:
+The minimum supported specs are that of the Raspberry Pi 4:178,553
+
 * Quad core 1.5Ghz CPU (must be 64 bit)
 * 2 GB Ram
 * Python 3.7 and above
@@ -325,5 +326,4 @@ chia -h
 
 # Testnets
 To join the testnets, we recommend you keep a separate environment by prepending `CHIA_ROOT="~/.chia/testnetx"` to all
-of your cli commands. For example, `CHIA_ROOT="~/.chia/testnet5 chia init`. You should also change the `selected_network`
-in the config.yaml, for all services, from `mainnet` to `testnetx` (i.e. `testnet5`). You should also replace `8444` with `58444` in the config file, and potentially change the introducer url as well (ask on keybase).
+of your cli commands. For example, `CHIA_ROOT="~/.chia/testnet7 chia init`. An easier way to do this, is to just `export CHIA_ROOT="~/.chia/testnet7` so all commands will use testnet7 instead of mainnet.  You should also update all config values to the testnet values, by doing `chia configure -t True`. 
