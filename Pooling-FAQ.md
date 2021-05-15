@@ -27,6 +27,9 @@ We are not going to allow pools to use "Chia" as the first word or its equivalen
 ## If a pool gets 51% of netspace, can they take over the network?
 No, Chia's pooling protocol is designed where the blocks are farmed by individual farmer, but the pooling rewards go to the pool operator's wallet. This ensures that even if a pool has 51% netspace, they would also need to control 51% of the farmer nodes to do any malicious activity. This will be very difficult unless 51% of farmers downloaded a malicious Chia client.
 
+## I have more questions, where do I ask?
+Join dedicated Keybase room: @chia_network.public#pools
+
 # Technical FAQ
 
 ## What programming language is the reference pool code written in?
