@@ -3,7 +3,7 @@
 ## When will Chia official pooling software be released?
 The Chia pool reference code will be released to Testnet by end of May, 2021. Afterwards, pool operators will need time to adapt their pooling code to use Chia's method to calculate farmer's share, collect from pool wallet, and distribute XCH to pool participants. For non-developers, reference code is just that, a reference to use when building your own solution. It is not a turn-key solution someone can immediately deploy and run without the right skillset, time, and effort to make the modifications needed for your own use.
 
-## Will I need to replot to use official pooling protocol?
+## Will I need to replot to use the official pooling protocol?
 Yes. Anyone who wants to join a pool will need to create new portable plots. This new plot format allows you to switch between pools and self-pooling with a cooldown of 30 minutes between each switch. Our recommendation is to slowly replace your existing plots with portable plots one by one, so you still have a chance to win XCH while you convert to all portable plots.
 
 ## When can I start creating portable plots?
@@ -36,4 +36,4 @@ Python
 If you've written pool code before, the reference pool code will be easy to understand. It's just replacing PoW concepts with Chia's method of evaluating each farmer's participation via PoST and adapting collection and distribution of XCH using Chia's smart contracts.
 
 ## I am a programmer, but never wrote pool code, will I be able to run a pool with Chia's reference pool?
-If it's your first time writing pool code, I recommend you look at established BTC or ETH pools on the other features they provide users. You are likely going to compete with big time pool operators from those crypto communities who will provide feature rich pools for Chia on day one. Examples of features: leaderboards, wallet explorer, random prizes, tiered pool fees, etc.
+If it's your first time writing pool code, we recommend you look at established BTC or ETH pools on the other features they provide users. You are likely going to compete with big time pool operators from those crypto communities who will provide feature rich pools for Chia on day one. Examples of features: leaderboards, wallet explorer, random prizes, tiered pool fees, etc.
