@@ -1,5 +1,7 @@
 Update: Try our [experimental GUI installer](https://download.chia.net/latest/ARM64-Ubuntu-gui) for Raspberry Pi OS 64 and Ubuntu 20.04 LTS or newer on ARM64.
 
+Tom's Hardware now has a [nice piece on farming with the Pi](https://www.tomshardware.com/how-to/raspberry-pi-chia-coin).
+
 Note: The Raspberry Pi 3 is not supported.
 
 The following recipe was tested on a Pi 4 (4GiB RAM) running both Ubuntu Server 20.04 LTS 64 bit and Raspbian 64 bit. 64 bit OSes and python 3.7+ are required but helpfully Ubuntu 20.04 has python 3.8 out of the box and Raspbian ships with python 3.7. You can't just run a 64 bit kernel with a 32 bit OS install as you need 64 bit python 3.7+ also.
