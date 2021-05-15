@@ -35,5 +35,5 @@ Python
 ## How hard is it to adapt Chia's reference pool code to my pool code?
 If you've written pool code before, the reference pool code will be easy to understand. It's just replacing PoW concepts with Chia's method of evaluating each farmer's participation via PoST and adapting collection and distribution of XCH using Chia's smart contracts.
 
-## I am a programmer, but never wrote pool code, will I be able to run a pool with Chia's reference pool?
+## I am a programmer, but never wrote pool code, will I be able to run a pool with Chia's reference pool code?
 If it's your first time writing pool code, we recommend you look at established BTC or ETH pools on the other features they provide users. You are likely going to compete with big time pool operators from those crypto communities who will provide feature rich pools for Chia on day one. Examples of features: leaderboards, wallet explorer, random prizes, tiered pool fees, etc.
