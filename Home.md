@@ -5,6 +5,7 @@
 * [Install instructions](https://github.com/Chia-Network/chia-blockchain/wiki/INSTALL)
 * [Quick Start Guide](https://github.com/Chia-Network/chia-blockchain/wiki/Quick-Start-Guide)
 * [FAQ](https://github.com/Chia-Network/chia-blockchain/wiki/FAQ) Frequently Asked Questions
+* [Pooling FAQ](https://github.com/Chia-Network/chia-blockchain/wiki/Pooling-FAQ) Pooling FAQ
 * [Chia Project FAQ](https://www.chia.net/faq/)
 * [Plotting Basics](https://www.chia.net/2021/02/22/plotting-basics.html)
 * [Plot Sizes (k-sizes)](https://github.com/Chia-Network/chia-blockchain/wiki/k-sizes)
