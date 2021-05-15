@@ -7,7 +7,7 @@ The Chia pool reference code will be released to Testnet by end of May, 2021. Af
 Yes. Anyone who wants to join a pool will need to create new portable plots. This new plot format allows you to switch between pools and self-pooling with a cooldown of 30 minutes between each switch. Our recommendation is to slowly replace your existing plots with portable plots one by one, so you still have a chance to win XCH while you convert to all portable plots.
 
 ## When can I start creating portable plots?
-Support for portable plots will be released on or before May, 31, 2021.
+Support for portable plots will be released on or before May 31, 2021.
 
 ## How can I start my own pool?
 If you have experience writing pool server code for another crypto, adapting that pool code with Chia's reference pool code will be straight forward. We only recommend people who have good OPSEC experience to run public pool servers. All pools will be targeted by hackers due to the profitability of XCH currently.
