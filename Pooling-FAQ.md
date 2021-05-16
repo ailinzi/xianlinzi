@@ -15,6 +15,9 @@ If you have experience writing pool server code for another crypto, adapting tha
 ## Where can I find a list of Chia pools?
 A crypto community site lists all upcoming Chia pools: https://miningpoolstats.stream/chia
 
+## Can I advertise my pool in Keybase?
+You can only advertise your pool in Keybase @chia_network.public#pools once a day. If you're spammy, mods will warn you and then ban you if you persist.
+
 ## Why shouldn't I join Hpool?
 Hpool has created their own version of Chia client that has no source code released with it. There is no telling what kind of malicious activity that client can do. Chia Network Inc discourages everyone from joining any pool that requires custom clients.
 
