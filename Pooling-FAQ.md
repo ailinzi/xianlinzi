@@ -31,7 +31,7 @@ We are not going to allow pools to use "Chia" as the first word or its equivalen
 No, Chia's pooling protocol is designed where the blocks are farmed by individual farmer, but the pooling rewards go to the pool operator's wallet. This ensures that even if a pool has 51% netspace, they would also need to control 51% of the farmer nodes to do any malicious activity. This will be very difficult unless 51% of farmers downloaded a malicious Chia client.
 
 ## I have more questions, where do I ask?
-Join dedicated Keybase room: @chia_network.public#pools
+Join our dedicated Keybase room: @chia_network.public#pools
 
 Friendly reminder: do NOT at `@` or Direct Message (DM) developers or mods. Just post your questions in Keybase and we will answer when we have a moment.
 
