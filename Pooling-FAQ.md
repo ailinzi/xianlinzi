@@ -95,4 +95,4 @@ class RespondSubmitPartial(Streamable):
 ## Where can I see the Chia Pool Reference Code?
 Note: this is a work in progress draft and likely to change before 1.0 release.
 
-You can find it here: https://github.com/Chia-Network/pool-reference
+Please note this is Work In Progress (WIP), and not fully functional yet. You can find it here: https://github.com/Chia-Network/pool-reference
