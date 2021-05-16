@@ -43,3 +43,52 @@ If you've written pool code before, the reference pool code will be easy to unde
 
 ## I am a programmer, but never wrote pool code, will I be able to run a pool with Chia's reference pool code?
 If it's your first time writing pool code, we recommend you look at established BTC or ETH pools on the other features they provide users. You are likely going to compete with big time pool operators from those crypto communities who will provide feature rich pools for Chia on day one. Examples of features: leaderboards, wallet explorer, random prizes, tiered pool fees, etc.
+
+## What are the API methods a pool server needs to support Chia clients?
+There are two API methods that the pool HTTP server has to support: get-pool-info and submit-partial
+```
+@dataclass(frozen=True)
+@streamable
+class PoolInfo(Streamable):
+    name: str
+    logo_url: str
+    minimum_difficulty: uint64
+    maximum_difficulty: uint64
+    relative_lock_height: uint32
+    protocol_version: str
+    fee: str
+    description: str
+    pool_puzzle_hash: bytes32
+
+
+@dataclass(frozen=True)
+@streamable
+class PartialPayload(Streamable):
+    proof_of_space: ProofOfSpace
+    sp_hash: bytes32
+    end_of_sub_slot: bool
+    difficulty: uint64  # This is the difficulty threshold for this account, assuming SSI = 1024*5
+    singleton_genesis: bytes32  # This is what identifies the farmer's account for the pool
+    owner_public_key: G1Element  # Current public key specified in the singleton
+    singleton_coin_id_hint: bytes32  # Some incarnation of the singleton, the later the better
+    rewards_target: bytes  # The farmer can choose where to send the rewards. This can take a few minutes
+
+
+@dataclass(frozen=True)
+@streamable
+class SubmitPartial(Streamable):
+    payload: PartialPayload
+    rewards_and_partial_aggregate_signature: G2Element  # Signature of rewards by singleton key, and partial by plot key
+
+
+@dataclass(frozen=True)
+@streamable
+class RespondSubmitPartial(Streamable):
+    error_code: uint16
+    error_message: Optional[str]
+    points_balance: uint64
+    difficulty: uint64  # Current difficulty that the pool is using to give credit to this farmer
+```
+
+## Where can I see the Chia Pool Reference Code?
+You can find it here: https://github.com/Chia-Network/pool-reference
