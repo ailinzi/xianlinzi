@@ -46,6 +46,8 @@ If it's your first time writing pool code, we recommend you look at established 
 
 ## What are the API methods a pool server needs to support Chia clients?
 There are two API methods that the pool HTTP server has to support: get-pool-info and submit-partial
+Note: this is a work in progress draft and likely to change before 1.0 release.
+
 ```
 @dataclass(frozen=True)
 @streamable
@@ -91,4 +93,6 @@ class RespondSubmitPartial(Streamable):
 ```
 
 ## Where can I see the Chia Pool Reference Code?
+Note: this is a work in progress draft and likely to change before 1.0 release.
+
 You can find it here: https://github.com/Chia-Network/pool-reference
