@@ -1,11 +1,9 @@
 
 These are machines that work well to quickly create plots in parallel. These serve as starting points to think about acquiring or modifying existing systems to be good plotting machines on a TBs of plots created per day basis. You don't need this level of hardware to then farm plots that have been generated however. For that a [Raspberry Pi](https://github.com/Chia-Network/chia-blockchain/wiki/Raspberry-Pi) is enough.
 
-NEW
+* [Chia budget plotting desktop guide](https://docs.google.com/document/d/18a5_MO88hv_DL_644OGFoCiKnpR9udl-PAWKlyIqqQU/edit?usp=sharing)
 
-[Chia budget plotting desktop guide](https://docs.google.com/document/d/18a5_MO88hv_DL_644OGFoCiKnpR9udl-PAWKlyIqqQU/edit?usp=sharing)
-
-[Chia plotting basics](https://www.chia.net/2021/02/22/plotting-basics.html)
+* [Chia plotting basics](https://www.chia.net/2021/02/22/plotting-basics.html)
 
 Plotting can be done on consumer systems (laptops), but is much faster done on high-end desktops, workstations, and servers. Plotting takes scaling for CPU cores to improve the parallelism (this is -r number of threads, or number of parallel processes), scaling in DRAM per process, and fast SSDs or many small 10k hard drives for temporary storage space.
 
@@ -21,7 +19,7 @@ The amount of DRAM and temp space changed in [1.0.4](https://chiadecentral.com/c
 
 The goal of a plotting machine is to create the highest TiB per day of plots, with the lowest system cost. There are many unique combinations of consumer, data center, and enterprise hardware at many different price points that are adequate for plotting. For SSDs, please see the https://github.com/Chia-Network/chia-blockchain/wiki/SSD-Endurance page
 
-this is a spreadsheet of the community systems to compare against
+This is a spreadsheet of the community systems to compare against:
 https://docs.google.com/spreadsheets/d/14Iw5drdvNJuKTSh6CQpTwnMM5855MQ46/
 
 | User        | System Name                | OS                    | Motherboard / SAS Adapter (Server) | CPU                                        | DRAM                     | Temp Drive                                     | Time Phase 1 (s) | Total Time per Plot (s) | Time (min) | Time (hr) | GiB Written | GiB/min | // Plots | TiB/day (all // Plots) | Total Price (USD) | $/TiB/day | version | -r (Threads) | -b (Memory) |
