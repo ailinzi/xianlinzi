@@ -32,7 +32,8 @@ No, Chia's pooling protocol is designed where the blocks are farmed by individua
 
 ## I have more questions, where do I ask?
 Join dedicated Keybase room: @chia_network.public#pools
-Friendly reminder do NOT at `@` or Direct Message (DM) developers or mods. Just post your questions Keybase and we will answer when we have a moment.
+
+Friendly reminder: do NOT at `@` or Direct Message (DM) developers or mods. Just post your questions in Keybase and we will answer when we have a moment.
 
 # Technical FAQ
 
