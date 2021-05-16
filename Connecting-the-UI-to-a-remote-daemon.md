@@ -1,6 +1,6 @@
 # Setup
 
-For Linux based systems
+For a Linux based farmer and Windows GUI. The same concept apply for other OS combinations.
 
 ## On the daemon host
 
@@ -25,7 +25,11 @@ To secure their connection, the UI will need the daemon's certificates. Copy the
 
 ## On the UI host
 
-_This only works when the *CHIA_ROOT* environment variable is set to the correct location of `~/.chia/mainnet/`_
+### Set the CHIA_ROOT environment variable
+
+[Set the `CHIA_ROOT` environment variable](https://www.alphr.com/environment-variables-windows-10/) to the correct location of your mainnent settings folder. Typically `C:\Users\<user>\.chia\mainnet` on Windows.
+
+### Reference the daemon's cert files
 
 Place the daemon's cert files, copied earlier, in the following location:
 
@@ -49,11 +53,12 @@ daemon_ssl:
 ## GUI Client
 
 ### Can the GUI find the config folder?
+
 The first thing to check is that the daemon's websocket URI shows up on the title bar. It should look like this:
 
 ![image](https://user-images.githubusercontent.com/5160233/111890456-6ca97f00-89b7-11eb-8f20-a8dc80d0d138.png)
 
-If the title bar doesn't look like that ensure that the `CHIA_ROOT` environment variable is set to the path to your `mainnet` folder (`~/.chia/mainnet/` on Ubuntu). Also make sure there isn't a [syntax error](https://yamlchecker.com/) in config.yaml.
+If the title bar doesn't look like that ensure that the `CHIA_ROOT` environment variable is set to the path to your `mainnet` folder (`~/.chia/mainnet/` on Ubuntu; `C:\Users\<user>\.chia\mainnet` on Windows.). Also make sure there isn't a [syntax error](https://yamlchecker.com/) in config.yaml.
 
 ### Can the GUI find the remote daemon's certs?
 
@@ -62,6 +67,7 @@ Double check that in the `ui` section the crt and key paths are correct. It _sho
 ## Connectivity
 
 ### Has the daemon been bound to a routable IP address?
+
 On the daemon host run `sudo netstat -tulpn | grep 55400` or your OS's equivalent. It should show something similar to `tcp        0    0 0.0.0.0:55400    0.0.0.0:*    LISTEN    2925/chia_daemon`.
 
 If you see `127.0.0.1` it means you haven't changed the daemon's bind IP address. The loopback address is not routable on the network. Double check that `self_hostname: 0.0.0.0` is correct in the config. Also make sure you have fully restarted the daemon:
@@ -75,7 +81,7 @@ chia start farmer
 
 Run `sudo ufw status | grep 55400` or your OS and firewall equivalent. You should see something like `55400/tcp                  ALLOW`.
 
-
 ### Is VMWare Plugin Service bound to daemon port?
 
 Verify that the default port 55400 is not bound to VMWare Plugin or other service on the daemon host. If pre-bound, stop that other service or change the `daemon_port` value in `config.yaml`. `netstat -tulpn` includes the process name of listeners. It should be `chia_daemon`.
+
