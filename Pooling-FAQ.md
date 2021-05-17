@@ -143,3 +143,5 @@ maximum_difficulty: uint64
 doggywalker - Will there be anything in the new portable plot names to easily distinguish them from solo plots?
 
 xch_pool - do I have to use this (points_balance) value? we will be implementing our own reward system? with own pool explorer, so is this "points_balance" being shown in the official chia GUI somewhere, causing that I'd have to use it?
+
+raffling - Another question, the singleton genesis allows us to identify a user across multiple payout wallet addresses which is neat but most farmers will most likely prefer lookup by wallet address. Are there any pros / cons in choosing either as the ID of a pool user from a technical standpoint? For example did you have things in mind for the future where if we did not key users by singleton_genesis that we'd miss out on?
