@@ -6,6 +6,9 @@ The Chia pool reference code will be released to Testnet by end of May, 2021. Af
 ## Will I need to replot to use the official pooling protocol?
 Yes. Anyone who wants to join a pool will need to create new K32 portable plots. This new plot format allows you to switch between pools and self-pooling with a cooldown of 30 minutes between each switch. Our recommendation is to slowly replace your existing plots with portable plots one by one, so you still have a chance to win XCH while you convert to all portable plots.
 
+## Can I farm with both old (fixed) plots and portable plots?
+Yes. The farmer will support both fixed plots and portable plots on one machine.
+
 ## When can I start creating portable plots?
 Support for portable plots will be released on or before May 31, 2021.
 
