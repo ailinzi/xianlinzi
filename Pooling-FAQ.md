@@ -131,9 +131,8 @@ dddroptables - also seems like rewards_target can be provided for each partial s
 
 raffling - In the reference code, it's storing the last difficulty the farmer sent every time. What's the motivation behind that
 
-felixbrucker -
+felixbrucker - for js can we make them str encodable in json?
 ```
 minimum_difficulty: uint64
 maximum_difficulty: uint64
 ```
-for js can we make them str encodable in json?
