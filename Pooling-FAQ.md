@@ -147,4 +147,4 @@ raffling - Just wanted to make 200% sure I get this right. During this cooldown 
 
 raffling - What's the max cooldown pools can set? Anything close over over an hour effectively completely disincentivizes farmers from switch as they'd be missing out on shares
 
-xch_pool - that's why I am eager to get an answer to my question: is there a way to actively detect users breaking the smart contract with the pool
+xch_pool - that's why I am eager to get an answer to my question: is there a way to actively detect users breaking the smart contract with the pool; e.g. leaving the pool
