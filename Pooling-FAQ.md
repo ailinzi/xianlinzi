@@ -146,3 +146,5 @@ xch_pool  - another question .. I am trying to find anything that keeps this poo
 raffling - Just wanted to make 200% sure I get this right. During this cooldown after the switch announcement from the farmer the pool can still claim rewards. And the pool can essentially enforce the cooldown period on the farmer upon joining?
 
 raffling - What's the max cooldown pools can set? Anything close over over an hour effectively completely disincentivizes farmers from switch as they'd be missing out on shares
+
+xch_pool - that's why I am eager to get an answer to my question: is there a way to actively detect users breaking the smart contract with the pool
