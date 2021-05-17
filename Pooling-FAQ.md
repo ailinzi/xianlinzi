@@ -37,6 +37,11 @@ Friendly reminder: do NOT at `@` or Direct Message (DM) developers or mods. Just
 
 # Technical FAQ
 
+## Why isn't the pool reference code working?
+Currently the Pool Reference Code isn't fully functional, as there are a lot pieces that need to be checked in. Devs are being transparent in providing early preview of what's going on. While all the pieces are being built out and you see progress, please be patient.
+
+We feel being able to give you early access allows you to start framing your thinking about the work that needs to be done. It's likely the code will change many times before it becomes 1.0.
+
 ## What programming language is the reference pool code written in?
 Python
 
@@ -45,6 +50,15 @@ If you've written pool code before, the reference pool code will be easy to unde
 
 ## I am a programmer, but never wrote pool code, will I be able to run a pool with Chia's reference pool code?
 If it's your first time writing pool code, we recommend you look at established BTC or ETH pools on the other features they provide users. You are likely going to compete with big time pool operators from those crypto communities who will provide feature rich pools for Chia on day one. Examples of features: leaderboards, wallet explorer, random prizes, tiered pool fees, etc.
+
+## How does one calculate a farmer's netspace?
+Farmers will be sending partial proofs (proofs with lower difficulty than the blockchain) to prove netspace. We expect the farmer to send a partial proof based on a current signage point to the pool server every 5 minutes (300 proofs a day) within a 25 second window. The pool protocol will allow pools to set a minimum difficulty, a maximum difficulty, and a time window for farmers' partial proof submissions. Farmers will be able to pick a difficulty that lets them submit the least number of proofs that prove their netspace.
+
+## How do you identify the farmer that submitted partial proofs?
+The farmer will provide their singleton_genesis which is the ID of that farmer's pool group
+
+## Will pool servers need to keep track of all farmers and their share of rewards?
+Yes, the pool operator will need to write code to keep track of all farmers and their share of rewards. Chia's pool protocol assumes no registration is needed to join a pool, so every singelton_genesis that submits a valid partial proof needs to be tracked by the pool server.
 
 ## What are the API methods a pool server needs to support Chia clients?
 There are two API methods that the pool HTTP server has to support: get-pool-info and submit-partial
@@ -99,3 +113,10 @@ class RespondSubmitPartial(Streamable):
 Note: this is a work in progress draft, not fully functional and likely to change before 1.0 release.
 
 You can find it here: https://github.com/Chia-Network/pool-reference
+
+# Outstanding Questions to Devs
+felixbrucker - Do pools need to run the clvm in their own code? if i as a pool can just call a full node api method to run the required clvm instead of doing it by foot like it is done here that works for me
+willi123yao - pay to singleton stuff doesn't seem ready yet. How will that work?
+felixbrucker - what is the reasoning behind always providing points_balance and difficulty even in errors like this one https://github.com/Chia-Network/pool-reference/blob/147f9361be1353cf71062d5b2df673eb384c5f66/pool.py#L266-L272 ?
+dddroptables - taking a look at the reference pool and i'm a little confused about the usage of owner_public_key vs singleton_genesis. Seems owner_public_key is the farmer's public key, which should uniquely identify a farmer's account. singleton_genesis also seems to identify a pool group. Which one should be used to identify a farmer, seems they are both used in various places? Can either of these change for a farmer without expecting an account reset?
+dddroptables - also seems like rewards_target can be provided for each partial submission. the reference pool looks like it's just overwriting each time for that farmer. is this just meant to be a way for farmers to change their payout address on the fly? or supposed to aggregate payouts for each individual partial to different rewards_target? (the latter seems a bit overly complex, the former seems like a potential security issue with the protocol imo)
