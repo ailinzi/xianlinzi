@@ -125,3 +125,5 @@ felixbrucker - what is the reasoning behind always providing points_balance and 
 dddroptables - taking a look at the reference pool and i'm a little confused about the usage of owner_public_key vs singleton_genesis. Seems owner_public_key is the farmer's public key, which should uniquely identify a farmer's account. singleton_genesis also seems to identify a pool group. Which one should be used to identify a farmer, seems they are both used in various places? Can either of these change for a farmer without expecting an account reset?
 
 dddroptables - also seems like rewards_target can be provided for each partial submission. the reference pool looks like it's just overwriting each time for that farmer. is this just meant to be a way for farmers to change their payout address on the fly? or supposed to aggregate payouts for each individual partial to different rewards_target? (the latter seems a bit overly complex, the former seems like a potential security issue with the protocol imo)
+
+raffling - In the reference code, it's storing the last difficulty the farmer sent every time. What's the motivation behind that
