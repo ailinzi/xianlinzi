@@ -116,6 +116,8 @@ You can find it here: https://github.com/Chia-Network/pool-reference
 
 # Outstanding Questions to Devs
 
+felixbrucker, raffling - whats the reasoning behind a max difficulty?
+
 felixbrucker - Do pools need to run the clvm in their own code? if i as a pool can just call a full node api method to run the required clvm instead of doing it by foot like it is done here that works for me
 
 willi123yao - pay to singleton stuff doesn't seem ready yet. How will that work?
