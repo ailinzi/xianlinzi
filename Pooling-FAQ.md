@@ -55,10 +55,10 @@ If you've written pool code before, the reference pool code will be easy to unde
 If it's your first time writing pool code, we recommend you look at established BTC or ETH pools source code and features they provide users. You are likely going to compete with big time pool operators from those crypto communities who will provide feature rich pools for Chia on day one. Examples of features: leaderboards, wallet explorer, random prizes, tiered pool fees, etc.
 
 ## How does one calculate a farmer's netspace?
-Farmers will be sending partial proofs (proofs with lower difficulty than the blockchain) to prove netspace. We expect the farmer to send a partial proof based on a current signage point to the pool server every 5 minutes (300 proofs a day) within a 25 second window. The pool protocol will allow pools to set a minimum difficulty, a maximum difficulty, and a time window for farmers' partial proof submissions. Farmers will be able to pick a difficulty that lets them submit the least number of proofs that prove their netspace.
+Farmers will be sending partial proofs (proofs with lower difficulty than the blockchain) to prove netspace. We expect the farmer to send a partial proof based on a current signage point to the pool server every 5 minutes (300 proofs a day) within a 25 second window. The pool protocol will allow pools to set a minimum difficulty and a time window for farmers' partial proof submissions. Farmers will be able to pick a difficulty that lets them submit the least number of proofs that prove their netspace.
 
 ## How does difficulty affect farmer's nestpace calculation?
-Difficulty is linear. Imagine this scenario: Obtaining 1000 proofs with difficulty 1, is equivalent to obtaining 100 proofs with difficulty 10. As a pool server, you prefer to receive 100 proofs with difficulty 10. This is why we allow pool servers to set a minimum difficulty level to reduce the number of proofs each farmer needs to send to prove their netspace.
+Difficulty is linear. Imagine this scenario: Obtaining 10 proofs a day with difficulty 1 for a k32, is equivalent to obtaining 1 proof a day with difficulty 10. As a pool server, you prefer to receive 1 proof a day per K32 with difficulty 10. This is why we allow pool servers to set a minimum difficulty level to reduce the number of proofs each farmer needs to send to prove their netspace.
 
 ## How do you identify the farmer that submitted partial proofs?
 The farmer will provide their singleton_genesis which is the ID of that farmer's pool group. They will also provide their Farmer Public Key, so the pool server can validate the proof and verify the farmer signed it properly.
@@ -119,3 +119,25 @@ class RespondSubmitPartial(Streamable):
 Note: this is a work in progress draft, not fully functional and likely to change before 1.0 release.
 
 You can find it here: https://github.com/Chia-Network/pool-reference
+
+# Features Requests to Devs
+
+grintor - To allow users with different netspace be redirected to different URL to submit their proofs with different minimum difficulties. "Can we talk about the possibility of using HTTP redirects to manage server load by moving peers to API endpoints with higher or lower difficulties?
+It would be nice to be able to work with very small farmers and make sure they are online by using difficulty 1, but to also deal with very large farmers without high server load
+And we can't rely on the farmers to self-police by choosing to sync with the correctly sized API endpoint
+so it would be very nice for the server to be able to instruct the client which to use
+everyone starts at the API endpoint with difficulty 1, and as the pool sees that they are submitting work very fast, it moves them up in difficulty until it has them at a nice place where it can be sure they are online but it's not getting spammed with requests
+This can be implemented by just coding the pool subscribing agent to understand what a http 301 redirect means, and honoring it"
+
+felixbrucker - Create RPC calls in full node to take CLVM calls in reference pool code. "is there any reason this could not just be an rpc call in chia-blockchain? it feels like a lot of work to re-implement all that logic currently only avail in python, and chia-blockchain has all the required parts included anyway"
+
+# Outstanding Questions to Devs
+
+willi123yao - what is the point of storing the farmer difficulty? usually for pools is that the difficulty would reset when a new connection is made, so similarly for pools it should reset the difficulty when no shares are received after a certain amount of time
+
+serafimcloud - Do you have any CPU, RAM, DISK requirements to run a full node?
+
+marclar - what is SingletonState.relative_lock_height?
+
+xch_pool  - another question .. I am trying to find anything that keeps this pool reference code from being stateless .. only I could find is coin_record_cache (being local LRUCache, and for example could be rewritten to use a redis or something) .. am I missing anything?
+
