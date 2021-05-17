@@ -130,10 +130,10 @@ And we can't rely on the farmers to self-police by choosing to sync with the cor
 so it would be very nice for the server to be able to instruct the client which to use
 everyone starts at the API endpoint with difficulty 1, and as the pool sees that they are submitting work very fast, it moves them up in difficulty until it has them at a nice place where it can be sure they are online but it's not getting spammed with requests
 This can be implemented by just coding the pool subscribing agent to understand what a http 301 redirect means, and honoring it"
-_Under investigation on scope of work and timing of feature release_: https://trello.com/c/4UORocJL/1179-grintor-to-allow-users-with-different-netspace-be-redirected-to-different-url-to-submit-their-proofs-with-different-minimum-diff
+**Under investigation on scope of work and timing of feature release**: https://trello.com/c/4UORocJL/1179-grintor-to-allow-users-with-different-netspace-be-redirected-to-different-url-to-submit-their-proofs-with-different-minimum-diff
 
 felixbrucker - Create RPC calls in full node to process CLVM needed by reference pool code. "is there any reason this could not just be an rpc call in chia-blockchain? it feels like a lot of work to re-implement all that logic currently only avail in python, and chia-blockchain has all the required parts included anyway"
-_Will be implemented as fast follow after Pooling 1.0 is released_: https://trello.com/c/5goJUups/1180-felixbrucker-create-rpc-calls-in-full-node-to-process-clvm-needed-by-reference-pool-code
+**Will be implemented as fast follow feature after Pooling 1.0 is released**: https://trello.com/c/5goJUups/1180-felixbrucker-create-rpc-calls-in-full-node-to-process-clvm-needed-by-reference-pool-code
 
 # Outstanding Questions to Devs
 
