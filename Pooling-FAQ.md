@@ -119,6 +119,7 @@ You can find it here: https://github.com/Chia-Network/pool-reference
 felixbrucker - Do pools need to run the clvm in their own code? if i as a pool can just call a full node api method to run the required clvm instead of doing it by foot like it is done here that works for me
 
 willi123yao - pay to singleton stuff doesn't seem ready yet. How will that work?
+
 felixbrucker - what is the reasoning behind always providing points_balance and difficulty even in errors like this one https://github.com/Chia-Network/pool-reference/blob/147f9361be1353cf71062d5b2df673eb384c5f66/pool.py#L266-L272 ?
 
 dddroptables - taking a look at the reference pool and i'm a little confused about the usage of owner_public_key vs singleton_genesis. Seems owner_public_key is the farmer's public key, which should uniquely identify a farmer's account. singleton_genesis also seems to identify a pool group. Which one should be used to identify a farmer, seems they are both used in various places? Can either of these change for a farmer without expecting an account reset?
