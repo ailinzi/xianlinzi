@@ -147,4 +147,6 @@ raffling - Just wanted to make 200% sure I get this right. During this cooldown 
 
 raffling - What's the max cooldown pools can set? Anything close over over an hour effectively completely disincentivizes farmers from switch as they'd be missing out on shares
 
+raffling - Can I get a confirmation that during the cooldown period, the pool that was left can still claim rewards? Aka we don't need an XL VM just to scan the blockchain asap for unclaimed rewards with minimal latency? 😄
+
 xch_pool - that's why I am eager to get an answer to my question: is there a way to actively detect users breaking the smart contract with the pool (leaving the pool)
