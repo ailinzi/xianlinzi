@@ -141,3 +141,5 @@ maximum_difficulty: uint64
 ```
 
 doggywalker - Will there be anything in the new portable plot names to easily distinguish them from solo plots?
+
+xch_pool - do I have to use this (points_balance) value? we will be implementing our own reward system? with own pool explorer, so is this "points_balance" being shown in the official chia GUI somewhere, causing that I'd have to use it?
