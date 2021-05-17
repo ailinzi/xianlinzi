@@ -137,7 +137,7 @@ felixbrucker - Create RPC calls in full node to process CLVM needed by reference
 
 willi123yao - what is the point of storing the farmer difficulty? usually for pools is that the difficulty would reset when a new connection is made, so similarly for pools it should reset the difficulty when no shares are received after a certain amount of time
 
-serafimcloud - Do you have any CPU, RAM, DISK requirements to run a full node?
+serafimcloud - Do you have any CPU, RAM, DISK requirements to run a full node? (for the pool server)
 
 marclar - what is SingletonState.relative_lock_height?
 
@@ -147,4 +147,4 @@ raffling - Just wanted to make 200% sure I get this right. During this cooldown 
 
 raffling - What's the max cooldown pools can set? Anything close over over an hour effectively completely disincentivizes farmers from switch as they'd be missing out on shares
 
-xch_pool - that's why I am eager to get an answer to my question: is there a way to actively detect users breaking the smart contract with the pool; e.g. leaving the pool
+xch_pool - that's why I am eager to get an answer to my question: is there a way to actively detect users breaking the smart contract with the pool (leaving the pool)
