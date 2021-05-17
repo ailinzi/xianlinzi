@@ -119,29 +119,3 @@ class RespondSubmitPartial(Streamable):
 Note: this is a work in progress draft, not fully functional and likely to change before 1.0 release.
 
 You can find it here: https://github.com/Chia-Network/pool-reference
-
-# Outstanding Questions to Devs
-
-felixbrucker, raffling - whats the reasoning behind a max difficulty?
-
-felixbrucker - Do pools need to run the clvm in their own code? if i as a pool can just call a full node api method to run the required clvm instead of doing it by foot like it is done here that works for me
-
-willi123yao - pay to singleton stuff doesn't seem ready yet. How will that work?
-
-felixbrucker - what is the reasoning behind always providing points_balance and difficulty even in errors like this one https://github.com/Chia-Network/pool-reference/blob/147f9361be1353cf71062d5b2df673eb384c5f66/pool.py#L266-L272 ?
-
-dddroptables - also seems like rewards_target can be provided for each partial submission. the reference pool looks like it's just overwriting each time for that farmer. is this just meant to be a way for farmers to change their payout address on the fly? or supposed to aggregate payouts for each individual partial to different rewards_target? (the latter seems a bit overly complex, the former seems like a potential security issue with the protocol imo)
-
-raffling - In the reference code, it's storing the last difficulty the farmer sent every time. What's the motivation behind that
-
-felixbrucker - for js can we make them str encodable in json?
-```
-minimum_difficulty: uint64
-maximum_difficulty: uint64
-```
-
-doggywalker - Will there be anything in the new portable plot names to easily distinguish them from solo plots?
-
-xch_pool - do I have to use this (points_balance) value? we will be implementing our own reward system? with own pool explorer, so is this "points_balance" being shown in the official chia GUI somewhere, causing that I'd have to use it?
-
-raffling - Another question, the singleton genesis allows us to identify a user across multiple payout wallet addresses which is neat but most farmers will most likely prefer lookup by wallet address. Are there any pros / cons in choosing either as the ID of a pool user from a technical standpoint? For example did you have things in mind for the future where if we did not key users by singleton_genesis that we'd miss out on?
