@@ -122,6 +122,8 @@ You can find it here: https://github.com/Chia-Network/pool-reference
 
 # Features Requests to Devs
 
+Features requests to devs will be reviewed and ultimately decided by @hoffmang if it is included in 1.0 or a later release of pooling software:
+
 grintor - To allow users with different netspace be redirected to different URL to submit their proofs with different minimum difficulties. "Can we talk about the possibility of using HTTP redirects to manage server load by moving peers to API endpoints with higher or lower difficulties?
 It would be nice to be able to work with very small farmers and make sure they are online by using difficulty 1, but to also deal with very large farmers without high server load
 And we can't rely on the farmers to self-police by choosing to sync with the correctly sized API endpoint
@@ -129,7 +131,7 @@ so it would be very nice for the server to be able to instruct the client which 
 everyone starts at the API endpoint with difficulty 1, and as the pool sees that they are submitting work very fast, it moves them up in difficulty until it has them at a nice place where it can be sure they are online but it's not getting spammed with requests
 This can be implemented by just coding the pool subscribing agent to understand what a http 301 redirect means, and honoring it"
 
-felixbrucker - Create RPC calls in full node to take CLVM calls in reference pool code. "is there any reason this could not just be an rpc call in chia-blockchain? it feels like a lot of work to re-implement all that logic currently only avail in python, and chia-blockchain has all the required parts included anyway"
+felixbrucker - Create RPC calls in full node to process CLVM needed by reference pool code. "is there any reason this could not just be an rpc call in chia-blockchain? it feels like a lot of work to re-implement all that logic currently only avail in python, and chia-blockchain has all the required parts included anyway"
 
 # Outstanding Questions to Devs
 
@@ -141,3 +143,6 @@ marclar - what is SingletonState.relative_lock_height?
 
 xch_pool  - another question .. I am trying to find anything that keeps this pool reference code from being stateless .. only I could find is coin_record_cache (being local LRUCache, and for example could be rewritten to use a redis or something) .. am I missing anything?
 
+raffling - Just wanted to make 200% sure I get this right. During this cooldown after the switch announcement from the farmer the pool can still claim rewards. And the pool can essentially enforce the cooldown period on the farmer upon joining?
+
+raffling - What's the max cooldown pools can set? Anything close over over an hour effectively completely disincentivizes farmers from switch as they'd be missing out on shares
