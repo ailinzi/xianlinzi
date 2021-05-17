@@ -58,7 +58,7 @@ Farmers will be sending partial proofs (proofs with lower difficulty than the bl
 Difficulty is linear. Imagine this scenario: Obtaining 1000 proofs with difficulty 1, is equivalent to obtaining 100 proofs with difficulty 10. As a pool server, you prefer to receive 100 proofs with difficulty 10. This is why we allow pool servers to set a minimum difficulty level to reduce the number of proofs each farmer needs to send to prove their netspace.
 
 ## How do you identify the farmer that submitted partial proofs?
-The farmer will provide their singleton_genesis which is the ID of that farmer's pool group
+The farmer will provide their singleton_genesis which is the ID of that farmer's pool group. They will also provide their Farmer Public Key, so the pool server can validate the proof and verify the farmer signed it properly.
 
 ## Will pool servers need to keep track of all farmers and their share of rewards?
 Yes, the pool operator will need to write code to keep track of all farmers and their share of rewards. Chia's pool protocol assumes no registration is needed to join a pool, so every singelton_genesis that submits a valid partial proof needs to be tracked by the pool server.
