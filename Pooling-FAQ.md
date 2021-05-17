@@ -1,7 +1,7 @@
 # General FAQ
 
 ## When will Chia official pooling software be released?
-The Chia pool reference code will be released to Testnet by end of May, 2021. Afterwards, pool operators will need time to adapt their pooling code to use Chia's method to calculate farmer's share, collect from pool wallet, and distribute XCH to pool participants. For non-developers, reference code is just that, a reference to use when building your own solution. It is not a turn-key solution someone can immediately deploy and run without the right skillset, time, and effort to make the modifications needed for your own use.
+The Chia pool reference code will be released to Testnet by end of May, 2021. Afterwards, pool operators will need time to adapt their pooling code to use Chia's method to calculate farmer's share, collect to pool wallet, and distribute XCH to pool participants. For non-developers, reference code is just that, a reference to use when building your own solution. It is not a turn-key solution someone can immediately deploy and run without the right skillset, time, and effort to make the modifications needed for your own use.
 
 ## Will I need to replot to use the official pooling protocol?
 Yes. Anyone who wants to join a pool will need to create new K32 portable plots. This new plot format allows you to switch between pools and self-pooling with a cooldown of 30 minutes between each switch. Our recommendation is to slowly replace your existing plots with portable plots one by one, so you still have a chance to win XCH while you convert to all portable plots.
