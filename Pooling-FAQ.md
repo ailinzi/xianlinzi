@@ -136,3 +136,5 @@ felixbrucker - for js can we make them str encodable in json?
 minimum_difficulty: uint64
 maximum_difficulty: uint64
 ```
+
+doggywalker - Will there be anything in the new portable plot names to easily distinguish them from solo plots?
