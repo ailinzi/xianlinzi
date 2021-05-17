@@ -54,6 +54,9 @@ If it's your first time writing pool code, we recommend you look at established 
 ## How does one calculate a farmer's netspace?
 Farmers will be sending partial proofs (proofs with lower difficulty than the blockchain) to prove netspace. We expect the farmer to send a partial proof based on a current signage point to the pool server every 5 minutes (300 proofs a day) within a 25 second window. The pool protocol will allow pools to set a minimum difficulty, a maximum difficulty, and a time window for farmers' partial proof submissions. Farmers will be able to pick a difficulty that lets them submit the least number of proofs that prove their netspace.
 
+## How does difficulty affect farmer's nestpace calculation?
+Difficulty is linear. Imagine this scenario: Obtaining 1000 proofs with difficulty 1, is equivalent to obtaining 100 proofs with difficulty 10. As a pool server, you prefer to receive 100 proofs with difficulty 10. This is why we allow pool servers to set a minimum difficulty level to reduce the number of proofs each farmer needs to send to prove their netspace.
+
 ## How do you identify the farmer that submitted partial proofs?
 The farmer will provide their singleton_genesis which is the ID of that farmer's pool group
 
