@@ -152,3 +152,8 @@ raffling - What's the max cooldown pools can set? Anything close over over an ho
 raffling - Can I get a confirmation that during the cooldown period, the pool that was left can still claim rewards? Aka we don't need an XL VM just to scan the blockchain asap for unclaimed rewards with minimal latency? 😄
 
 xch_pool - that's why I am eager to get an answer to my question: is there a way to actively detect users breaking the smart contract with the pool (leaving the pool)
+
+dddroptables - To follow up on raffling's question/answer:
+It sounds like if a p2_singleton_ph is spent it will use up the singleton_genesis and create a new one. Is that correct? Meaning the id of the user would change every time we get a payout in the pool based on that user winning
+
+dddroptables - Got it. Would there be any gain to keeping track of all the singleton_coin_ids for every spend that occurs? Would we need that to do later spends if say, the same user wins again? Or we would only need to spend with the p2_singleton_puzzle_hash every time?
