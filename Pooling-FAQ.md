@@ -122,45 +122,11 @@ You can find it here: https://github.com/Chia-Network/pool-reference
 
 # Features Requests to Devs
 
-Features requests to devs will be reviewed and ultimately decided by @hoffmang if it is included in 1.0 or a later release of pooling software:
-
-grintor - To allow users with different netspace be redirected to different URL to submit their proofs with different minimum difficulties. "Can we talk about the possibility of using HTTP redirects to manage server load by moving peers to API endpoints with higher or lower difficulties?
-It would be nice to be able to work with very small farmers and make sure they are online by using difficulty 1, but to also deal with very large farmers without high server load
-And we can't rely on the farmers to self-police by choosing to sync with the correctly sized API endpoint
-so it would be very nice for the server to be able to instruct the client which to use
-everyone starts at the API endpoint with difficulty 1, and as the pool sees that they are submitting work very fast, it moves them up in difficulty until it has them at a nice place where it can be sure they are online but it's not getting spammed with requests
-This can be implemented by just coding the pool subscribing agent to understand what a http 301 redirect means, and honoring it"
-**Under investigation on scope of work and timing of feature release**: https://trello.com/c/4UORocJL/1179-grintor-to-allow-users-with-different-netspace-be-redirected-to-different-url-to-submit-their-proofs-with-different-minimum-diff
-
-felixbrucker - Create RPC calls in full node to process CLVM needed by reference pool code. "is there any reason this could not just be an rpc call in chia-blockchain? it feels like a lot of work to re-implement all that logic currently only avail in python, and chia-blockchain has all the required parts included anyway"
-**Will NOT be implemented**
+No new feature requests taken at this time.
 
 # Outstanding Questions to Devs
 
-willi123yao - what is the point of storing the farmer difficulty? usually for pools is that the difficulty would reset when a new connection is made, so similarly for pools it should reset the difficulty when no shares are received after a certain amount of time
-
-serafimcloud - Do you have any CPU, RAM, DISK requirements to run a full node? (for the pool server)
-
-marclar - what is SingletonState.relative_lock_height?
-
-xch_pool  - another question .. I am trying to find anything that keeps this pool reference code from being stateless .. only I could find is coin_record_cache (being local LRUCache, and for example could be rewritten to use a redis or something) .. am I missing anything?
-
-raffling - Just wanted to make 200% sure I get this right. During this cooldown after the switch announcement from the farmer the pool can still claim rewards. And the pool can essentially enforce the cooldown period on the farmer upon joining?
-
-raffling - What's the max cooldown pools can set? Anything close over over an hour effectively completely disincentivizes farmers from switch as they'd be missing out on shares
-
-raffling - Can I get a confirmation that during the cooldown period, the pool that was left can still claim rewards? Aka we don't need an XL VM just to scan the blockchain asap for unclaimed rewards with minimal latency? 😄
-
-xch_pool - that's why I am eager to get an answer to my question: is there a way to actively detect users breaking the smart contract with the pool (leaving the pool)
-
-dddroptables - To follow up on raffling's question/answer:
-It sounds like if a p2_singleton_ph is spent it will use up the singleton_genesis and create a new one. Is that correct? Meaning the id of the user would change every time we get a payout in the pool based on that user winning
-
-dddroptables - Got it. Would there be any gain to keeping track of all the singleton_coin_ids for every spend that occurs? Would we need that to do later spends if say, the same user wins again? Or we would only need to spend with the p2_singleton_puzzle_hash every time?
-
-dddroptables - Yeah but the p2_singleton_puzzle_hash is only to claim rewards for the pool, right? Pool would then send payout to the reward_address on file for that user. So we'd need to keep track of p2_singleton_puzzle_hash for each user in case they win, and spend that to claim our cut. Is that consistent with the model being used here?
-
-dddroptables - Just thought of another question. Does validating the proofs become more difficult on server side as the difficult  is increased? Meaning, the higher difficulty proof is submitted to pool the more time/bigger cpu will be needed to validate? Or is validation linear no matter the difficulty?
+All caught up!
 
 # Draft FAQ Items
 
