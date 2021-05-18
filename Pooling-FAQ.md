@@ -162,6 +162,8 @@ dddroptables - Yeah but the p2_singleton_puzzle_hash is only to claim rewards fo
 
 dddroptables - Just thought of another question. Does validating the proofs become more difficult on server side as the difficult  is increased? Meaning, the higher difficulty proof is submitted to pool the more time/bigger cpu will be needed to validate? Or is validation linear no matter the difficulty?
 
+# Draft FAQ Items
+
 ## How do pool collect rewards?
 To be cleaned up, temporary cut and paste of Keybase conversation as a place holder...
 We need to keep track of the latest singleton coin ID of each singleton. And every time we claim rewards with it, it will create a new ID.
