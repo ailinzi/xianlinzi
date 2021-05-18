@@ -133,7 +133,7 @@ This can be implemented by just coding the pool subscribing agent to understand 
 **Under investigation on scope of work and timing of feature release**: https://trello.com/c/4UORocJL/1179-grintor-to-allow-users-with-different-netspace-be-redirected-to-different-url-to-submit-their-proofs-with-different-minimum-diff
 
 felixbrucker - Create RPC calls in full node to process CLVM needed by reference pool code. "is there any reason this could not just be an rpc call in chia-blockchain? it feels like a lot of work to re-implement all that logic currently only avail in python, and chia-blockchain has all the required parts included anyway"
-**Will be implemented as fast follow feature after Pooling 1.0 is released**: https://trello.com/c/5goJUups/1180-felixbrucker-create-rpc-calls-in-full-node-to-process-clvm-needed-by-reference-pool-code
+**Will NOT be implemented**
 
 # Outstanding Questions to Devs
 
