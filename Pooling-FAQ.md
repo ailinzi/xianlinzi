@@ -211,6 +211,11 @@ sorgente711
 You must spend the whole 1.75 whenever spending one of the coins.
 alright yeah, i meant if i have two coins with each 1.75, if i need to spend both coins, or if could just spend one of them and the other at a later time, id assume this works
 No, I don't, but the scannign will be basically looking at all child_coins for each singleton and then seeing which one is the new singleton
+But this suggests there is a way
+6:02 AM
+dddroptables
+Great, so anyone upon seeing the block can spend the p2_singleton_ph and it will redeem to owners. Does not need to be owner of the farmer PK or pool address PK, correct?
+yeah exactly. And it has to be a coinbase reward, it can't be any coin owned by p2_singleton_ph
 
 ## What actions can singleton take?
 There are a few things you can do to the singleton:
