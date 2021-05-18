@@ -161,3 +161,25 @@ dddroptables - Got it. Would there be any gain to keeping track of all the singl
 dddroptables - Yeah but the p2_singleton_puzzle_hash is only to claim rewards for the pool, right? Pool would then send payout to the reward_address on file for that user. So we'd need to keep track of p2_singleton_puzzle_hash for each user in case they win, and spend that to claim our cut. Is that consistent with the model being used here?
 
 dddroptables - Just thought of another question. Does validating the proofs become more difficult on server side as the difficult  is increased? Meaning, the higher difficulty proof is submitted to pool the more time/bigger cpu will be needed to validate? Or is validation linear no matter the difficulty?
+
+## How do pool collect rewards?
+To be cleaned up, temporary cut and paste of Keybase conversation as a place holder...
+We need to keep track of the latest singleton coin ID of each singleton. And every time we claim rewards with it, it will create a new ID.
+What happens when a user wins a block and gets rewards credited to the singleton ph, does the coin id change at this point? ie say a new user with 0 pool rewards on his singleton ph joins, at this point id guess there is no coin id, because there are no coins. Then he wins a block, and id expect there to be a coin id of that reward (1.75xch). Then directly after that block he wins another block, before the pool could claim any rewards. Does he have two coin ids at this point, or only one with 2x 1.75 xch in it?
+sorgente711
+12:37 AM
+It's important to distinguish between the singleton and the p2_singleton_puzzle_hash
+The rewards from the blockchain go straight into the p2_singleton_puzzle_hash, this is like a temporary storage for rewards. Rewards which can only be claimed by the singleton
+The singleton itself must be created beforehand, before the user starts farming
+The p2_singleton puzzle and the singleton are both spent together. This creates a new singleton coin ID
+farmerhoss
+12:38 AM
+joined #pools.
+sorgente711
+12:39 AM
+But the user might have 10 rewards in his p2_singleton address
+the pool can claim all 10 at the same time
+(well technically each claim requires spending the singleton and creating a new incarnation of the singleton, but you can do this all within the same block)
+Does that make sense? So wining blocks doesn't do anything to the singleton. It just puts the 1.75 into this treasure chest waiting to be claimed by the singleton
+felixbrucker
+12:47 AM
