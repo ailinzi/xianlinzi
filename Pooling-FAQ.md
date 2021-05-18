@@ -41,7 +41,7 @@ Friendly reminder: do NOT at `@` or Direct Message (DM) developers or mods. Just
 # Technical FAQ
 
 ## Why isn't the pool reference code working?
-Currently the Pool Reference Code isn't fully functional, as there are a lot pieces that need to be checked in. Devs are being transparent in providing early preview of what's going on. While all the pieces are being built out and you see progress, please be patient.
+Currently the Pool Reference Code isn't fully functional, as there are a lot pieces that need to be checked in all Chia repos. Devs are being transparent in providing early preview of what's going on. While all the pieces are being built out and you see progress, please be patient.
 
 We feel being able to give you early access allows you to start framing your thinking about the work that needs to be done. It's likely the code will change many times before it becomes 1.0.
 
