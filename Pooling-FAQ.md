@@ -210,3 +210,4 @@ felixbrucker
 sorgente711
 You must spend the whole 1.75 whenever spending one of the coins.
 alright yeah, i meant if i have two coins with each 1.75, if i need to spend both coins, or if could just spend one of them and the other at a later time, id assume this works
+No, I don't, but the scannign will be basically looking at all child_coins for each singleton and then seeing which one is the new singleton
