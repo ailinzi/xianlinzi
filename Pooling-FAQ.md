@@ -164,8 +164,11 @@ dddroptables - Just thought of another question. Does validating the proofs beco
 
 # Draft FAQ Items
 
+Important Keybase conversations captured that needs to be converted to FAQ items. All items below will be cleaned up, this is just a place to temporarily cut and paste conversations in Keybase as a place holder:
+
 ## How do pool collect rewards?
-To be cleaned up, temporary cut and paste of Keybase conversation as a place holder...
+felixbrucker
+12:30 AM
 We need to keep track of the latest singleton coin ID of each singleton. And every time we claim rewards with it, it will create a new ID.
 What happens when a user wins a block and gets rewards credited to the singleton ph, does the coin id change at this point? ie say a new user with 0 pool rewards on his singleton ph joins, at this point id guess there is no coin id, because there are no coins. Then he wins a block, and id expect there to be a coin id of that reward (1.75xch). Then directly after that block he wins another block, before the pool could claim any rewards. Does he have two coin ids at this point, or only one with 2x 1.75 xch in it?
 sorgente711
@@ -175,8 +178,6 @@ The rewards from the blockchain go straight into the p2_singleton_puzzle_hash, t
 The singleton itself must be created beforehand, before the user starts farming
 The p2_singleton puzzle and the singleton are both spent together. This creates a new singleton coin ID
 farmerhoss
-12:38 AM
-joined #pools.
 sorgente711
 12:39 AM
 But the user might have 10 rewards in his p2_singleton address
