@@ -216,6 +216,10 @@ But this suggests there is a way
 dddroptables
 Great, so anyone upon seeing the block can spend the p2_singleton_ph and it will redeem to owners. Does not need to be owner of the farmer PK or pool address PK, correct?
 yeah exactly. And it has to be a coinbase reward, it can't be any coin owned by p2_singleton_ph
+sorgente711
+6:25 AM
+Whenever one of the pool members (farmers) wins a block, then the reward can be claimed to the pool's address. Anyone can initiate the claim on the blockchain.
+The, periodically, the pool will pay all of the members based on some formula
 
 ## What actions can singleton take?
 There are a few things you can do to the singleton:
