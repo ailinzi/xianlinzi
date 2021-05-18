@@ -201,6 +201,7 @@ sorgente711
 - the coins from above can be spent to the pools puzzle hash for later distribution, this can include all or part of the coins of a single pay to singleton puzzle hash
 ^ You must spend the entire reward I think. Also, spending this also requires spending the singleton and creating a new version of that singleton.
 - to spend multiple coins from above you still need separate txs (can not be one tx)
+
 Yes, but these transactions can all be combined into one (because you can merge transactions in Chia) and they can all happen at the same time
 Apart from that, your understanding is correct
 You must spend the whole 1.75 whenever spending one of the coins.
