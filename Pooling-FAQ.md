@@ -159,3 +159,4 @@ It sounds like if a p2_singleton_ph is spent it will use up the singleton_genesi
 dddroptables - Got it. Would there be any gain to keeping track of all the singleton_coin_ids for every spend that occurs? Would we need that to do later spends if say, the same user wins again? Or we would only need to spend with the p2_singleton_puzzle_hash every time?
 
 dddroptables - Yeah but the p2_singleton_puzzle_hash is only to claim rewards for the pool, right? Pool would then send payout to the reward_address on file for that user. So we'd need to keep track of p2_singleton_puzzle_hash for each user in case they win, and spend that to claim our cut. Is that consistent with the model being used here?
+
