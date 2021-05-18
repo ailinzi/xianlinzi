@@ -160,3 +160,4 @@ dddroptables - Got it. Would there be any gain to keeping track of all the singl
 
 dddroptables - Yeah but the p2_singleton_puzzle_hash is only to claim rewards for the pool, right? Pool would then send payout to the reward_address on file for that user. So we'd need to keep track of p2_singleton_puzzle_hash for each user in case they win, and spend that to claim our cut. Is that consistent with the model being used here?
 
+dddroptables - Just thought of another question. Does validating the proofs become more difficult on server side as the difficult  is increased? Meaning, the higher difficulty proof is submitted to pool the more time/bigger cpu will be needed to validate? Or is validation linear no matter the difficulty?
