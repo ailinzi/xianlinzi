@@ -186,3 +186,26 @@ the pool can claim all 10 at the same time
 Does that make sense? So wining blocks doesn't do anything to the singleton. It just puts the 1.75 into this treasure chest waiting to be claimed by the singleton
 felixbrucker
 12:47 AM
+hm i dont quite get some parts yet
+
+ok, so i think the following is correct (please correct me if its not):
+- a singleton has a static genesis
+- a pay to singleton puzzle hash is static as well as its derived from the singleton genesis
+- pool rewards go to the (static) pay to singleton puzzle hash
+- when claiming pool rewards one needs to scan the blockchain by the pay to singleton puzzle hash and list all its coins (coin ids), if the user only won a single block it will be only one coin
+- the coins from above can be spent to the pools puzzle hash for later distribution, this can include all or part of the coins of a single pay to singleton puzzle hash
+- to spend multiple coins from above you still need separate txs (can not be one tx)
+EDITED
+sorgente711
+12:49 AM
+- the coins from above can be spent to the pools puzzle hash for later distribution, this can include all or part of the coins of a single pay to singleton puzzle hash
+^ You must spend the entire reward I think. Also, spending this also requires spending the singleton and creating a new version of that singleton.
+- to spend multiple coins from above you still need separate txs (can not be one tx)
+Yes, but these transactions can all be combined into one (because you can merge transactions in Chia) and they can all happen at the same time
+Apart from that, your understanding is correct
+You must spend the whole 1.75 whenever spending one of the coins.
+felixbrucker
+12:51 AM
+sorgente711
+You must spend the whole 1.75 whenever spending one of the coins.
+alright yeah, i meant if i have two coins with each 1.75, if i need to spend both coins, or if could just spend one of them and the other at a later time, id assume this works
