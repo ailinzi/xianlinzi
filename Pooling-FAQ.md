@@ -219,3 +219,5 @@ singleton genesis is the unique ID of the singleton, which is a smart coin that 
 puzzlehash is just an address but in a different format. Addresses are human readable
 Points represent the amount of farming that a farmer has done
 To accumulate 1000 points you need 10 TiB farming for a day
+No, a singleton is a smart coin that guarantees it's uniqueness, that it is the only coin with that unique ID.
+singleton means there is only 1.
