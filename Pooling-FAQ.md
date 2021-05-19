@@ -212,3 +212,8 @@ sorgente711
 richardmolte
 Another thing, that I wanted to ask, If I got this right is the difficulty. I think I understand the main concept of this. However imagine this scenario: Someone with a lot of netspace (e.g. 10 PiB) gets a high difficulty assigned. This means that his netspace is only "roughly sampled" and he might not be credited with some TiB even though he has them, right?
 No, the difficulty will be higher for the 10PB farmer but they will still regularly be sending proofs
+the number of proofs per day will be approximately the same regardless of farmer size
+Points = number of proofs submitted, weighted by diffiuclty. One k32 farms 10 points per day
+singleton coin id hint is removed
+singleton genesis is the unique ID of the singleton, which is a smart coin that the user controls
+puzzlehash is just an address but in a different format. Addresses are human readable
