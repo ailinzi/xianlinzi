@@ -7,7 +7,7 @@ The Chia pool reference code will be released to Testnet by end of May, 2021. Af
 Yes. Anyone who wants to join a pool will need to create new K32 portable plots. This new plot format allows you to switch between pools and self-pooling with a cooldown of 30 minutes (rules set by pool) between each switch. Each switch between pools will require a transaction with a smart contract on the blockchain. Our recommendation is to slowly replace your existing plots with portable plots one by one, so you still have a chance to win XCH while you convert to all portable plots.
 
 ## Will I need pay XCH to switch pools?
-Yes. It will require 1 mojo (1 trillionth of a XCH) to switch pools. The mojo is used to make a transaction with a smart contract on the blockchain. For those who don't have any XCH, they can get 100 mojos from Chia's official faucet: https://faucet.chia.net/
+Yes. It will require 1 mojo (1 trillionth of a XCH) to switch pools. The mojo is used to make a transaction with a smart contract on the blockchain. For those who don't have any XCH, you can get 100 mojos from Chia's official faucet: https://faucet.chia.net/
 
 ## Can I farm with both OG (original) plots and portable plots?
 Yes. The farmer will support both OG plots and portable plots on one machine.
