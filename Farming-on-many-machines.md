@@ -64,7 +64,7 @@ The outgoing `new_signage_point_harvester` message states the farmer sent a chal
 
 Here's how to find your logs: [Where to Find Things](https://github.com/Chia-Network/chia-blockchain/wiki/How-to-Check-If-Everything-is-Working-(or-Not)#where-to-find-things)
 
-If you are running the GUI and want to run multiple Harvesters
+If you are running the GUI on the main farmer and want to run multiple Harvesters from the CLI
 * Shut down Chia on main computer 
 * Find your IP address on computer
 * Make a copy of your **main** machine CA directory located in `c:\users\(your user name)\.chia\mainnet\config\ssl` - copy the CA file; you can share the `ssl/ca` directory on a network drive, USB key, or do a network copy to each harvester. You must copy the new `ssl/ca` directory with each version of `chia-blockchain`-- copy the CA file to the harvester machine -- know its location 
