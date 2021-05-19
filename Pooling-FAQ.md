@@ -192,3 +192,23 @@ There are a few things you can do to the singleton:
 - Change pool (needs owner signature)
 - Escape pool, this is announcing that you will change pool (needs owner signature)
 - Claim rewards (does not need any signature, it goes to the specified address in the singleton)
+
+## Variable names
+I have a few questions about the terminology in the reference code. Can you explain the following terms or tell me where I can look them up?
+
+- Puzzlehash (a different format for the receive address?)
+- singleton (Smart contract, so only the pool can claim rewards?)
+- singleton genesis (Unique identifier?)
+- singleton_coin_id_hint
+- points (Is this the current account balance in mojos?)
+
+I know this is quiete a bit to ask, but I would really like to get a better understanding of this.
+EDITED
+Another thing, that I wanted to ask, If I got this right is the difficulty. I think I understand the main concept of this. However imagine this scenario:
+
+Someone with a lot of netspace (e.g. 10 PiB) gets a high difficulty assigned. This means that his netspace is only "roughly sampled" and he might not be credited with some TiB even though he has them, right?
+sorgente711
+12:13 AM
+richardmolte
+Another thing, that I wanted to ask, If I got this right is the difficulty. I think I understand the main concept of this. However imagine this scenario: Someone with a lot of netspace (e.g. 10 PiB) gets a high difficulty assigned. This means that his netspace is only "roughly sampled" and he might not be credited with some TiB even though he has them, right?
+No, the difficulty will be higher for the 10PB farmer but they will still regularly be sending proofs
