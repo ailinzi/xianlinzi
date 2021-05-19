@@ -217,3 +217,5 @@ Points = number of proofs submitted, weighted by diffiuclty. One k32 farms 10 po
 singleton coin id hint is removed
 singleton genesis is the unique ID of the singleton, which is a smart coin that the user controls
 puzzlehash is just an address but in a different format. Addresses are human readable
+Points represent the amount of farming that a farmer has done
+To accumulate 1000 points you need 10 TiB farming for a day
