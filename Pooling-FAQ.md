@@ -129,7 +129,10 @@ No new feature requests taken at this time.
 
 # Outstanding Questions to Devs
 
-All caught up!
+serafirmcloud: keybase://chat/chia_network.public#pools/7367
+
+Why we use spent_block_index there if coin_record is not spent yet?
+https://github.com/Chia-Network/pool-reference/blob/main/pool.py#L327
 
 # Draft FAQ Items
 
