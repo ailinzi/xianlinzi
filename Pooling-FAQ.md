@@ -15,6 +15,10 @@ Yes. The farmer will support both OG plots and portable plots on one machine.
 ## When can I start creating portable plots?
 Support for portable plots will be released on or before May 31, 2021.
 
+## What is this new portable pool thing called?
+
+It is a Plot NFT that you will be plotting portable plots to.
+
 ## How can I start my own pool?
 If you have experience writing pool server code for another crypto, adapting that pool code with Chia's reference pool code will be straight forward. We only recommend people who have good OPSEC experience to run public pool servers. All pools will be targeted by hackers due to the profitability of XCH currently.
 
