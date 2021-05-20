@@ -34,7 +34,7 @@ To run a good pool takes a lot of effort, and it's not Chia Network Inc core bus
 We are not going to allow pools to use "Chia" as the first word or its equivalent (the chia pool). You can say things like "a Chia pool" though that will probably need a free and easy to get license.
 
 ## If a pool gets 51% of netspace, can they take over the network?
-No, Chia's pooling protocol is designed where the blocks are farmed by individual farmer, but the pooling rewards go to the pool operator's wallet. This ensures that even if a pool has 51% netspace, they would also need to control 51% of the farmer nodes to do any malicious activity. This will be very difficult unless 51% of farmers downloaded a malicious Chia client.
+No, Chia's pooling protocol is designed where the blocks are farmed by individual farmer, but the pooling rewards go to the pool operator's wallet. This ensures that even if a pool has 51% netspace, they would also need to control 51% of the farmer nodes to do any malicious activity. This will be very difficult unless 51% of farmers downloaded the same malicious Chia client (which requires a Bram like level genius to code it).
 
 ## I have more questions, where do I ask?
 Join our dedicated Keybase room: @chia_network.public#pools
