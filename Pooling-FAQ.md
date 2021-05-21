@@ -140,14 +140,30 @@ No new feature requests taken at this time.
 
 # Outstanding Questions to Devs
 
-willi123yao - also, just a side comment that the pool reference code is pretty much all in a single file, and I have to pull the repo and apply new changes to make my code compatible. will the pool reference devs consider splitting up important functions/calls into their own files so that we can import the code as a library instead? ideally it could be broken into a few parts, such as the partial checker, payout system and absorption runner
-
-willi123yao - will it be ok to run the pool on a non-default port? I presume the client needs to be able to handle that as well...
+willi123yao - keybase://chat/chia_network.public#pools/7667
+will it be ok to run the pool on a non-default port? I presume the client needs to be able to handle that as well...
 efishcent
 11:35 AM
 willi123yao
 will it be ok to run the pool on a non-default port? I presume the client needs to be able to handle that as well...
 Will add it to the list to ask Devs if it's on the roadmap. It's more will it be supported in 1.0 or post...
+
+willi123yao - keybase://chat/chia_network.public#pools/7674
+also, just a side comment that the pool reference code is pretty much all in a single file, and I have to pull the repo and apply new changes to make my code compatible. will the pool reference devs consider splitting up important functions/calls into their own files so that we can import the code as a library instead? ideally it could be broken into a few parts, such as the partial checker, payout system and absorption runner
+
+richardmolte - keybase://chat/chia_network.public#pools/7695
+Can someone tell me what the "get_recent_signage_point_or_eos" method does in the reference code?
+The reason why I am asking this, is because I would like to know if it is possible to run the "process_partial" method in parallel across multiple machines or threads.
+Thanks for your answer in advance :-)
+EDITED
+efishcent
+12:44 PM
+richardmolte
+Can someone tell me what the "get_recent_signage_point_or_eos" method does in the reference code? The reason why I am asking this, is because I would like to know if it is possible to run the "process_partial" method in parallel across multiple machines or threads. Thanks for your answer in advance :-)
+EDITED
+Partial proofs submitted by farmers should match the challenge of the most recent signage point or end of slot (EOS). The get_recent_signage_point_or_eos method is to get the information needed to help validate the partial proof.
+I believe running "process_partial" in parallel across multiple threads is fine and even possible across machines as long you have a way to ensure you only count each farmer's partial proof once and handle reorgs properly.
+I will add this to Devs Q&A just to make sure my answers are correct
 
 # Draft FAQ Items
 
