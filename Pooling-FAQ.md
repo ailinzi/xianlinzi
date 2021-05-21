@@ -140,16 +140,14 @@ No new feature requests taken at this time.
 
 # Outstanding Questions to Devs
 
-serafirmcloud: keybase://chat/chia_network.public#pools/7367
+willi123yao - also, just a side comment that the pool reference code is pretty much all in a single file, and I have to pull the repo and apply new changes to make my code compatible. will the pool reference devs consider splitting up important functions/calls into their own files so that we can import the code as a library instead? ideally it could be broken into a few parts, such as the partial checker, payout system and absorption runner
 
-Why we use spent_block_index there if coin_record is not spent yet?
-https://github.com/Chia-Network/pool-reference/blob/main/pool.py#L327
-
-serafimcloud: keybase://chat/chia_network.public#pools/7445
-9:53 AM
-photo_2021-05-20 09.52.27.jpeg
-
-probably, we have to write continue after 277 line? Cause we don't want to create_absorb_transaction for spent coins
+willi123yao - will it be ok to run the pool on a non-default port? I presume the client needs to be able to handle that as well...
+efishcent
+11:35 AM
+willi123yao
+will it be ok to run the pool on a non-default port? I presume the client needs to be able to handle that as well...
+Will add it to the list to ask Devs if it's on the roadmap. It's more will it be supported in 1.0 or post...
 
 # Draft FAQ Items
 
@@ -244,3 +242,7 @@ Points represent the amount of farming that a farmer has done
 To accumulate 1000 points you need 10 TiB farming for a day
 No, a singleton is a smart coin that guarantees it's uniqueness, that it is the only coin with that unique ID.
 singleton means there is only 1.
+
+## How is difficulty set for partial proofs
+
+The current thinking is the pool will dictate the difficulty for each farmer. The open question is the initial difficulty that should be set by the pool when it gets a new farmer that joins. There was a thought that the client suggests a difficulty. Right now we are leaning towards the default difficulty for a new farmer joining a pool will be difficulty 1 and the pool adjusts the minimum requirement for the specific farmer upwards based on the initial barrage of proofs.
