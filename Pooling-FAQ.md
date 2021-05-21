@@ -138,6 +138,12 @@ serafirmcloud: keybase://chat/chia_network.public#pools/7367
 Why we use spent_block_index there if coin_record is not spent yet?
 https://github.com/Chia-Network/pool-reference/blob/main/pool.py#L327
 
+serafimcloud: keybase://chat/chia_network.public#pools/7445
+9:53 AM
+photo_2021-05-20 09.52.27.jpeg
+
+probably, we have to write continue after 277 line? Cause we don't want to create_absorb_transaction for spent coins
+
 # Draft FAQ Items
 
 Important Keybase conversations captured that needs to be converted to FAQ items. All items below will be cleaned up, this is just a place to temporarily cut and paste conversations in Keybase as a place holder:
