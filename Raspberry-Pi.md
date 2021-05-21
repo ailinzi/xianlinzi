@@ -72,7 +72,7 @@ It is feasible to plot with the Pi but it's slow. Modern desktops and laptops pl
 
 ## Headless
 
-You can run without the GUI using commands like `chia init`, `chia start farmer`, and `watch 'chia show -s -c'`. Be sure to check out `chia show -h` if you do.
+You can run without the GUI using commands like `chia init`, `chia start farmer`, and `watch 'chia show -s -c'`. Be sure to check out `chia show -h` if you do. It is also possible to [remotely connect the UI to a headless node](https://github.com/Chia-Network/chia-blockchain/wiki/Connecting-the-UI-to-a-remote-daemon).
 
 ## Installing and running the GUI on Ubuntu 20.04 or Raspbian 64 bit
 
