@@ -72,7 +72,7 @@ curl --insecure --cert ~/.chia/mainnet/config/ssl/full_node/private_full_node.cr
 # Request
 
 curl --insecure --cert ~/.chia/mainnet/config/ssl/wallet/private_wallet.crt \
---key ~/.chia/mainnet/config/ssl/wallet/private_wallet.key -d '{"wallet_id": 1, "new_address":true}'\
+--key ~/.chia/mainnet/config/ssl/wallet/private_wallet.key -d '{"wallet_id": 1, "new_address":true}' \
 -H "Content-Type: application/json" -X POST https://localhost:9256/get_next_address | python -m json.tool
 
 # Response
