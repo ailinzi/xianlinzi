@@ -165,6 +165,9 @@ Partial proofs submitted by farmers should match the challenge of the most recen
 I believe running "process_partial" in parallel across multiple threads is fine and even possible across machines as long you have a way to ensure you only count each farmer's partial proof once and handle reorgs properly.
 I will add this to Devs Q&A just to make sure my answers are correct
 
+felixbrucker - keybase://chat/chia_network.public#pools/7706
+Question: is it possible to identify which farmer won a block when a farmer wins a block using portable plots?
+
 # Draft FAQ Items
 
 Important Keybase conversations captured that needs to be converted to FAQ items. All items below will be cleaned up, this is just a place to temporarily cut and paste conversations in Keybase as a place holder:
