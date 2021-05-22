@@ -168,6 +168,9 @@ I will add this to Devs Q&A just to make sure my answers are correct
 felixbrucker - keybase://chat/chia_network.public#pools/7706
 Question: is it possible to identify which farmer won a block when a farmer wins a block using portable plots?
 
+willi123yao - keybase://chat/chia_network.public#pools/7897
+I do remember asking a question regarding this sometime back... which are the more important/significant libraries that needs to be ported in order to make a chia pool on another lang?
+
 # Draft FAQ Items
 
 Important Keybase conversations captured that needs to be converted to FAQ items. All items below will be cleaned up, this is just a place to temporarily cut and paste conversations in Keybase as a place holder:
