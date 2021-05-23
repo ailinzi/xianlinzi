@@ -27,7 +27,7 @@ Support for portable plots will be released on or before May 31, 2021.
 It is a Plot NFT that you will be plotting portable plots to.
 
 ## How can I start my own pool?
-If you have experience writing pool server code for another crypto, adapting that pool code with Chia's reference pool code will be straight forward. We only recommend people who have good OPSEC experience to run public pool servers. Depending what country you operate your pooling business, you may be subject to tax, AML and KYC laws specific to your jurisdiction. All pools will be targeted by hackers due to the profitability of XCH currently.
+If you have experience writing pool server code for another crypto, adapting that pool code with Chia's reference pool code will be straight forward. We only recommend people who have good OPSEC experience to run public pool servers. Depending what country you operate your pooling business, you may be subject to tax, AML and KYC laws specific to your jurisdiction. All pools will be targeted by hackers due to the profitability of XCH and you may be legally liable if you have any losses.
 
 ## Where can I find a list of Chia pools?
 A crypto community site lists all upcoming Chia pools: https://miningpoolstats.stream/chia
