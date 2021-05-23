@@ -135,7 +135,7 @@ Note: this is a work in progress draft, not fully functional and likely to chang
 You can find it here: https://github.com/Chia-Network/pool-reference
 
 ## Why don't we give documentation or support dev preview of pooling code?
-We don't support dev preview of pooling code for a few reasons: 1) it's work in progress, and will change; 2) we need devs focused on completing the 1.0 version of pooling code, every question that needs time to answer increases the chances we slip; 3) pooling is a complicated set of software not meant for inexperienced coders to get involved with.
+We don't support dev preview of pooling code for a few reasons: 1) it's work in progress, and will continue to change as we get closer to launch; 2) we need devs focused on completing the 1.0 version of pooling code, and every question that they take time to answer increases the chances we will slip; 3) pooling is a very complicated set of software not meant for inexperienced coders to get involved with. The pooling code is not a turn-key solution without additional  development efforts from the pool operator, and generally speaking, if this question is relevant to you then odds are you do not have the existing experience needed to successfully (and securely) run a pool unassisted at this time.
 
 # Features Requests to Devs
 
