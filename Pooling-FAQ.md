@@ -94,7 +94,7 @@ There are a few things you can do to the singleton:
 - Escape pool, this is announcing that you will change pool (needs owner signature)
 - Claim rewards (does not need any signature, it goes to the specified address in the singleton)
 
-## How do pool collect rewards? (need validation)
+## How do pool collect rewards?
 - Farmer joins a pool, they will assign their singleton to the pool_puzzle_hash.
 - When a farmer wins a block, the pool rewards will be sent to the p2_singleton_puzzle_hash.
 - Pool will scan blockchain to find new rewards sent to Farmer's singletons.
@@ -162,95 +162,10 @@ No new feature requests taken at this time.
 
 # Outstanding Questions to Devs
 
-willi123yao - keybase://chat/chia_network.public#pools/7667
-will it be ok to run the pool on a non-default port? I presume the client needs to be able to handle that as well...
-efishcent
-11:35 AM
-willi123yao
-will it be ok to run the pool on a non-default port? I presume the client needs to be able to handle that as well...
-Will add it to the list to ask Devs if it's on the roadmap. It's more will it be supported in 1.0 or post...
-
-willi123yao - keybase://chat/chia_network.public#pools/7674
-also, just a side comment that the pool reference code is pretty much all in a single file, and I have to pull the repo and apply new changes to make my code compatible. will the pool reference devs consider splitting up important functions/calls into their own files so that we can import the code as a library instead? ideally it could be broken into a few parts, such as the partial checker, payout system and absorption runner
-
-richardmolte - keybase://chat/chia_network.public#pools/7695
-Can someone tell me what the "get_recent_signage_point_or_eos" method does in the reference code?
-The reason why I am asking this, is because I would like to know if it is possible to run the "process_partial" method in parallel across multiple machines or threads.
-Thanks for your answer in advance :-)
-EDITED
-efishcent
-12:44 PM
-richardmolte
-Can someone tell me what the "get_recent_signage_point_or_eos" method does in the reference code? The reason why I am asking this, is because I would like to know if it is possible to run the "process_partial" method in parallel across multiple machines or threads. Thanks for your answer in advance :-)
-EDITED
-Partial proofs submitted by farmers should match the challenge of the most recent signage point or end of slot (EOS). The get_recent_signage_point_or_eos method is to get the information needed to help validate the partial proof.
-I believe running "process_partial" in parallel across multiple threads is fine and even possible across machines as long you have a way to ensure you only count each farmer's partial proof once and handle reorgs properly.
-I will add this to Devs Q&A just to make sure my answers are correct
-
-felixbrucker - keybase://chat/chia_network.public#pools/7706
-Question: is it possible to identify which farmer won a block when a farmer wins a block using portable plots?
-
-willi123yao - keybase://chat/chia_network.public#pools/7897
-I do remember asking a question regarding this sometime back... which are the more important/significant libraries that needs to be ported in order to make a chia pool on another lang?
-
-cccat - keybase://chat/chia_network.public#pools/8307
-Can server.index and server.get_pool_info contains anything? Is there a danger of malicious code can be run in these HTTP responses if I code some javascript in it?
+All caught up at the moment!
 
 # Draft FAQ Items
 
 Important Keybase conversations captured that needs to be converted to FAQ items. All items below will be cleaned up, this is just a place to temporarily cut and paste conversations in Keybase as a place holder:
 
-## How do pool collect rewards? (to be deleted once FAQ item is validated)
-felixbrucker
-12:30 AM
-We need to keep track of the latest singleton coin ID of each singleton. And every time we claim rewards with it, it will create a new ID.
-What happens when a user wins a block and gets rewards credited to the singleton ph, does the coin id change at this point? ie say a new user with 0 pool rewards on his singleton ph joins, at this point id guess there is no coin id, because there are no coins. Then he wins a block, and id expect there to be a coin id of that reward (1.75xch). Then directly after that block he wins another block, before the pool could claim any rewards. Does he have two coin ids at this point, or only one with 2x 1.75 xch in it?
-sorgente711
-12:37 AM
-It's important to distinguish between the singleton and the p2_singleton_puzzle_hash
-The rewards from the blockchain go straight into the p2_singleton_puzzle_hash, this is like a temporary storage for rewards. Rewards which can only be claimed by the singleton
-The singleton itself must be created beforehand, before the user starts farming
-The p2_singleton puzzle and the singleton are both spent together. This creates a new singleton coin ID
-farmerhoss
-sorgente711
-12:39 AM
-But the user might have 10 rewards in his p2_singleton address
-the pool can claim all 10 at the same time
-(well technically each claim requires spending the singleton and creating a new incarnation of the singleton, but you can do this all within the same block)
-Does that make sense? So wining blocks doesn't do anything to the singleton. It just puts the 1.75 into this treasure chest waiting to be claimed by the singleton
-felixbrucker
-12:47 AM
-hm i dont quite get some parts yet
-
-ok, so i think the following is correct (please correct me if its not):
-- a singleton has a static genesis
-- a pay to singleton puzzle hash is static as well as its derived from the singleton genesis
-- pool rewards go to the (static) pay to singleton puzzle hash
-- when claiming pool rewards one needs to scan the blockchain by the pay to singleton puzzle hash and list all its coins (coin ids), if the user only won a single block it will be only one coin
-- the coins from above can be spent to the pools puzzle hash for later distribution, this can include all or part of the coins of a single pay to singleton puzzle hash
-- to spend multiple coins from above you still need separate txs (can not be one tx)
-EDITED
-sorgente711
-12:49 AM
-- the coins from above can be spent to the pools puzzle hash for later distribution, this can include all or part of the coins of a single pay to singleton puzzle hash
-^ You must spend the entire reward I think. Also, spending this also requires spending the singleton and creating a new version of that singleton.
-- to spend multiple coins from above you still need separate txs (can not be one tx)
-
-Yes, but these transactions can all be combined into one (because you can merge transactions in Chia) and they can all happen at the same time
-Apart from that, your understanding is correct
-You must spend the whole 1.75 whenever spending one of the coins.
-felixbrucker
-12:51 AM
-sorgente711
-You must spend the whole 1.75 whenever spending one of the coins.
-alright yeah, i meant if i have two coins with each 1.75, if i need to spend both coins, or if could just spend one of them and the other at a later time, id assume this works
-No, I don't, but the scannign will be basically looking at all child_coins for each singleton and then seeing which one is the new singleton
-But this suggests there is a way
-6:02 AM
-dddroptables
-Great, so anyone upon seeing the block can spend the p2_singleton_ph and it will redeem to owners. Does not need to be owner of the farmer PK or pool address PK, correct?
-yeah exactly. And it has to be a coinbase reward, it can't be any coin owned by p2_singleton_ph
-sorgente711
-6:25 AM
-Whenever one of the pool members (farmers) wins a block, then the reward can be claimed to the pool's address. Anyone can initiate the claim on the blockchain.
-The, periodically, the pool will pay all of the members based on some formula
+All caught up at the moment!
