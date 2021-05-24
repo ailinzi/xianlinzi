@@ -22,9 +22,8 @@ Yes. The farmer will support both OG plots and portable plots on one machine.
 ## When can I start creating portable plots?
 Support for portable plots will be released on or before May 31, 2021.
 
-## What is this new portable pool thing called?
-
-It is a Plot Group NFT that you will be plotting portable plots to.
+## How do I assign portable plots to a pool?
+First you will create a Plot NFT (GUI calls this Plot Group; devs call this singleton_genesis in their code) in the new pools tab in the GUI. When you create a new portable plot, you must assign it a specific Plot NFT; this replaces the Pool Public Key. All plots created with the same Plot NFT can then be assigned to a pool for farming.
 
 ## How can I start my own pool?
 If you have experience writing pool server code for another crypto, adapting that pool code with Chia's reference pool code will be straight forward. We only recommend people who have good OPSEC and business experience to run public pool servers. Depending what country you operate your pooling business, you may be subject to tax, AML and KYC laws specific to your jurisdiction. All pools will be targeted by hackers due to the profitability of XCH and you may be legally liable if you have any losses.
@@ -92,7 +91,6 @@ class PoolInfo(Streamable):
     name: str
     logo_url: str
     minimum_difficulty: uint64
-    maximum_difficulty: uint64
     relative_lock_height: uint32
     protocol_version: str
     fee: str
@@ -106,10 +104,9 @@ class PartialPayload(Streamable):
     proof_of_space: ProofOfSpace
     sp_hash: bytes32
     end_of_sub_slot: bool
-    difficulty: uint64  # This is the difficulty threshold for this account, assuming SSI = 1024*5
+    suggested_difficulty: uint64  # This is suggested the difficulty threshold for this account
     singleton_genesis: bytes32  # This is what identifies the farmer's account for the pool
     owner_public_key: G1Element  # Current public key specified in the singleton
-    singleton_coin_id_hint: bytes32  # Some incarnation of the singleton, the later the better
     rewards_target: bytes  # The farmer can choose where to send the rewards. This can take a few minutes
 
 
