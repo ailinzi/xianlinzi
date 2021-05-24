@@ -100,6 +100,8 @@ Command: `chia plots create [add flags and parameters]`
 
 `-e` [bitfield plotting]: Using the `-e` flag will disable the bitfield plotting algorithm, and revert back to the older b17 plotting style. After 1.0.4 it’s better to use bitfield for most cases (not using `-e`). Before 1.0.4 (obsolete) using the `-e` flag (bitfield disabled) lowers memory requirement, but also writes about 12% more data during creation of the plot. For now, SSD temp space will likely plot faster with `-e` (bitfield back propagation disabled) and for slower spinning disks, i.e SATA 5400/7200 rpm, **not** using `-e` (bitfield enabled) is a better option.
 
+`-x` [exclude final dir]: Skips adding [final dir] to harvester for farming.
+
 ### Example Plotting Commands
 
 Example below will create a k32 plot and use 4GB (note - not GiB) of memory.
