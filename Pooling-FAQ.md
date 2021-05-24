@@ -70,8 +70,14 @@ If you've written pool code before, the reference pool code will be easy to unde
 ## I am a programmer, but never wrote pool code, will I be able to run a pool with Chia's reference pool code?
 If it's your first time writing pool code, we recommend you look at established BTC or ETH pools source code and features they provide users. You are likely going to compete with big time pool operators from those crypto communities who will provide feature rich pools for Chia on day one. Examples of features: leaderboards, wallet explorer, random prizes, tiered pool fees, etc.
 
+## Variable names used in pooling code
+- puzzlehash: an address but in a different format. Addresses are human readable.
+- singleton: a smart coin (contract) that guaranteed to be unique and controlled by the user.
+- singleton_genesis: unique ID of the singleton.
+- points: represent the amount of farming that a farmer has done. It is calculated by number of proofs submitted, weighted by difficulty. One k32 farms 10 points per day. To accumulate 1000 points you need 10 TiB farming for a day. This is equivalent to shares in PoW pools.
+
 ## How does one calculate a farmer's netspace?
-Farmers will be sending partial proofs (proofs with lower difficulty than the blockchain) to prove netspace. We expect the farmer to send a partial proof based on a current signage point to the pool server every 5 minutes (300 proofs a day) within a 25 second window. The pool protocol will allow pools to set a minimum difficulty and a time window for farmers' partial proof submissions. Farmers will be able to pick a difficulty that lets them submit the least number of proofs that prove their netspace.
+Farmers will be sending partial proofs (proofs with lower difficulty than the blockchain) to prove netspace. We expect the farmer to send partial proofs based on a current signage point to the pool server every 5 minutes (averaging 300 proofs a day) within a 25 second window. Farmers will be able to suggest a difficulty that lets them submit the least number of proofs that prove their netspace, but Pool servers will ultimately set the minimum difficulty Farmers must send their partial proofs at.
 
 ## How does difficulty affect farmer's nestpace calculation?
 Difficulty is linear. Imagine this scenario: Obtaining 10 proofs a day with difficulty 1 for a k32, is equivalent to obtaining 1 proof a day with difficulty 10. As a pool server, you prefer to receive 1 proof a day per K32 with difficulty 10. This is why we allow pool servers to set a minimum difficulty level to reduce the number of proofs each farmer needs to send to prove their netspace.
@@ -94,7 +100,6 @@ There are a few things you can do to the singleton:
 - Pool will scan blockchain to find new rewards sent to Farmer's singletons.
 - The pool will send a request to claim rewards to the winning Farmer's singleton.
 - Farmer's singleton will send pool rewards XCH to pool_puzzle_hash.
-
 
 ## What are the API methods a pool server needs to support Chia clients?
 There are two API methods that the pool HTTP server has to support: get-pool-info and submit-partial
@@ -278,7 +283,3 @@ Points represent the amount of farming that a farmer has done
 To accumulate 1000 points you need 10 TiB farming for a day
 No, a singleton is a smart coin that guarantees it's uniqueness, that it is the only coin with that unique ID.
 singleton means there is only 1.
-
-## How is difficulty set for partial proofs
-
-The current thinking is the pool will dictate the difficulty for each farmer. The open question is the initial difficulty that should be set by the pool when it gets a new farmer that joins. There was a thought that the client suggests a difficulty. Right now we are leaning towards the default difficulty for a new farmer joining a pool will be difficulty 1 and the pool adjusts the minimum requirement for the specific farmer upwards based on the initial barrage of proofs.
