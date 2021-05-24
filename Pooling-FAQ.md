@@ -254,32 +254,3 @@ sorgente711
 6:25 AM
 Whenever one of the pool members (farmers) wins a block, then the reward can be claimed to the pool's address. Anyone can initiate the claim on the blockchain.
 The, periodically, the pool will pay all of the members based on some formula
-
-## Variable names
-I have a few questions about the terminology in the reference code. Can you explain the following terms or tell me where I can look them up?
-
-- Puzzlehash (a different format for the receive address?)
-- singleton (Smart contract, so only the pool can claim rewards?)
-- singleton genesis (Unique identifier?)
-- singleton_coin_id_hint
-- points (Is this the current account balance in mojos?)
-
-I know this is quiete a bit to ask, but I would really like to get a better understanding of this.
-EDITED
-Another thing, that I wanted to ask, If I got this right is the difficulty. I think I understand the main concept of this. However imagine this scenario:
-
-Someone with a lot of netspace (e.g. 10 PiB) gets a high difficulty assigned. This means that his netspace is only "roughly sampled" and he might not be credited with some TiB even though he has them, right?
-sorgente711
-12:13 AM
-richardmolte
-Another thing, that I wanted to ask, If I got this right is the difficulty. I think I understand the main concept of this. However imagine this scenario: Someone with a lot of netspace (e.g. 10 PiB) gets a high difficulty assigned. This means that his netspace is only "roughly sampled" and he might not be credited with some TiB even though he has them, right?
-No, the difficulty will be higher for the 10PB farmer but they will still regularly be sending proofs
-the number of proofs per day will be approximately the same regardless of farmer size
-Points = number of proofs submitted, weighted by diffiuclty. One k32 farms 10 points per day
-singleton coin id hint is removed
-singleton genesis is the unique ID of the singleton, which is a smart coin that the user controls
-puzzlehash is just an address but in a different format. Addresses are human readable
-Points represent the amount of farming that a farmer has done
-To accumulate 1000 points you need 10 TiB farming for a day
-No, a singleton is a smart coin that guarantees it's uniqueness, that it is the only coin with that unique ID.
-singleton means there is only 1.
