@@ -79,7 +79,7 @@ If it's your first time writing pool code, we recommend you look at established 
 ## How does one calculate a farmer's netspace?
 Farmers will be sending partial proofs (proofs with lower difficulty than the blockchain) to prove netspace. We expect the farmer to send partial proofs based on a current signage point to the pool server every 5 minutes (averaging 300 proofs a day) within a 25 second window. Farmers will be able to suggest a difficulty that lets them submit the least number of proofs that prove their netspace, but Pool servers will ultimately set the minimum difficulty Farmers must send their partial proofs at.
 
-## How does difficulty affect farmer's nestpace calculation?
+## How does difficulty affect farmer's netspace calculation?
 Difficulty is linear. Imagine this scenario: Obtaining 10 proofs a day with difficulty 1 for a k32, is equivalent to obtaining 1 proof a day with difficulty 10. As a pool server, you prefer to receive 1 proof a day per K32 with difficulty 10. This is why we allow pool servers to set a minimum difficulty level to reduce the number of proofs each farmer needs to send to prove their netspace.
 
 ## How do you identify the farmer that submitted partial proofs?
