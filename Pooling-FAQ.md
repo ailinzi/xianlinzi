@@ -23,7 +23,7 @@ Yes. The farmer will support both OG plots and portable plots on one machine.
 Support for portable plots will be released on or before May 31, 2021.
 
 ## How do I assign portable plots to a pool?
-First you will create a Plot NFT (devs call this singleton_genesis in their code) in the new pools tab in the GUI. When you create a new portable plot, you must assign it a specific Plot NFT (for those using CLI, this replaces the Pool Public Key). All plots created with the same Plot NFT can then be assigned to a pool for farming.
+First you will create a Plot NFT (devs call this singleton in their code) in the new pools tab in the GUI. When you create a new portable plot, you must assign it a specific Plot NFT (for those using CLI, this replaces the Pool Public Key). All plots created with the same Plot NFT can then be assigned to a pool for farming.
 
 ## How is Chia pooling different from other cryptos?
 Chia has three major differences from most other crypto pooling protocol: 1) Joining pools are permissionless. You do not need to sign up to an account on a pool server before joining. 2) Farmers receive 1/8th of XCH rewards plus transaction fees, while the pool receives 7/8th of XCH rewards. 3) The farmer with the winning proof will farm the block, not the pool server.
