@@ -23,7 +23,10 @@ Yes. The farmer will support both OG plots and portable plots on one machine.
 Support for portable plots will be released on or before May 31, 2021.
 
 ## How do I assign portable plots to a pool?
-First you will create a Plot NFT (GUI calls this Plot Group; devs call this singleton_genesis in their code) in the new pools tab in the GUI. When you create a new portable plot, you must assign it a specific Plot NFT; this replaces the Pool Public Key. All plots created with the same Plot NFT can then be assigned to a pool for farming.
+First you will create a Plot NFT (devs call this singleton_genesis in their code) in the new pools tab in the GUI. When you create a new portable plot, you must assign it a specific Plot NFT (for those using CLI, this replaces the Pool Public Key). All plots created with the same Plot NFT can then be assigned to a pool for farming.
+
+## How is Chia pooling different from other cryptos?
+Chia has three major differences from most other crypto pooling protocol: 1) Joining pools are permissionless. You do not need to sign up to an account on a pool server before joining. 2) Farmers receive 1/8th of XCH rewards plus transaction fees, while the pool receives 7/8th of XCH rewards. 3) The farmer with the winning proof will farm the block, not the pool server.
 
 ## How can I start my own pool?
 If you have experience writing pool server code for another crypto, adapting that pool code with Chia's reference pool code will be straight forward. We only recommend people who have good OPSEC and business experience to run public pool servers. Depending what country you operate your pooling business, you may be subject to tax, AML and KYC laws specific to your jurisdiction. All pools will be targeted by hackers due to the profitability of XCH and you may be legally liable if you have any losses.
@@ -78,6 +81,20 @@ The farmer will provide their singleton_genesis which is the ID of that farmer's
 
 ## Will pool servers need to keep track of all farmers and their share of rewards?
 Yes, the pool operator will need to write code to keep track of all farmers and their share of rewards. Chia's pool protocol assumes no registration is needed to join a pool, so every singelton_genesis that submits a valid partial proof needs to be tracked by the pool server.
+
+## What actions can singleton take?
+There are a few things you can do to the singleton:
+- Change pool (needs owner signature)
+- Escape pool, this is announcing that you will change pool (needs owner signature)
+- Claim rewards (does not need any signature, it goes to the specified address in the singleton)
+
+## How do pool collect rewards? (need validation)
+- Farmer joins a pool, they will assign their singleton to the pool_puzzle_hash.
+- When a farmer wins a block, the pool rewards will be sent to the p2_singleton_puzzle_hash.
+- Pool will scan blockchain to find new rewards sent to Farmer's singletons.
+- The pool will send a request to claim rewards to the winning Farmer's singleton.
+- Farmer's singleton will send pool rewards XCH to pool_puzzle_hash.
+
 
 ## What are the API methods a pool server needs to support Chia clients?
 There are two API methods that the pool HTTP server has to support: get-pool-info and submit-partial
@@ -178,7 +195,7 @@ Can server.index and server.get_pool_info contains anything? Is there a danger o
 
 Important Keybase conversations captured that needs to be converted to FAQ items. All items below will be cleaned up, this is just a place to temporarily cut and paste conversations in Keybase as a place holder:
 
-## How do pool collect rewards?
+## How do pool collect rewards? (to be deleted once FAQ item is validated)
 felixbrucker
 12:30 AM
 We need to keep track of the latest singleton coin ID of each singleton. And every time we claim rewards with it, it will create a new ID.
@@ -232,12 +249,6 @@ sorgente711
 6:25 AM
 Whenever one of the pool members (farmers) wins a block, then the reward can be claimed to the pool's address. Anyone can initiate the claim on the blockchain.
 The, periodically, the pool will pay all of the members based on some formula
-
-## What actions can singleton take?
-There are a few things you can do to the singleton:
-- Change pool (needs owner signature)
-- Escape pool, this is announcing that you will change pool (needs owner signature)
-- Claim rewards (does not need any signature, it goes to the specified address in the singleton)
 
 ## Variable names
 I have a few questions about the terminology in the reference code. Can you explain the following terms or tell me where I can look them up?
