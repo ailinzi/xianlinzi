@@ -162,10 +162,12 @@ No new feature requests taken at this time.
 
 # Outstanding Questions to Devs
 
-willi123yao
+willi123yao - keybase://chat/chia_network.public#pools/9067
+
 will the pool need to scour the blockchain to search for the farmer singleton coin? when the singleton coin is found, does the pool need to keep track of it?
 
-felixbrucker
+felixbrucker - keybase://chat/chia_network.public#pools/9122
+
 Look at https://github.com/Chia-Network/pool-reference/blob/1ca30ad453071c24bbf863c734a968cb836a6a82/SPECIFICATION.md#post-partials
 should this partial have a valid signature?
 
