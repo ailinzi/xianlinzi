@@ -171,6 +171,10 @@ felixbrucker - keybase://chat/chia_network.public#pools/9122
 Look at https://github.com/Chia-Network/pool-reference/blob/1ca30ad453071c24bbf863c734a968cb836a6a82/SPECIFICATION.md#post-partials
 should this partial have a valid signature?
 
+felixbrucker - keybase://chat/chia_network.public#pools/9221
+
+on that note i got a question: will these proofs be exposed via the already available farming info rpc api, or will there be a distinction between high/low diff proofs?
+
 # Draft FAQ Items
 
 Important Keybase conversations captured that needs to be converted to FAQ items. All items below will be cleaned up, this is just a place to temporarily cut and paste conversations in Keybase as a place holder:
