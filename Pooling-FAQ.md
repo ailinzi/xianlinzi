@@ -20,7 +20,7 @@ Yes. It will require 1 mojo (1 trillionth of a XCH) to switch pools. The mojo is
 Yes. The farmer will support both OG plots and portable plots on one machine.
 
 ## When can I start creating portable plots?
-Support for portable plots will be released on or before May 31, 2021 on testnet. If you are OK with potential testing will find bugs that may require to replot, you are free to try it. Otherwise we recommend you wait for mainnet launch sometime in June.
+Support for portable plots will be released on or before May 31, 2021 on testnet. If you are OK with potential bugs found in testing that may require to replot, you are free to try it. Otherwise we recommend you wait for mainnet launch sometime in June.
 
 ## How do I assign portable plots to a pool?
 First you will create a Plot NFT (devs call this singleton in their code) in the new pools tab in the GUI. When you create a new portable plot, you must assign it a specific Plot NFT (for those using CLI, this replaces the Pool Public Key). All plots created with the same Plot NFT can then be assigned to a pool for farming.
