@@ -156,6 +156,9 @@ You can find it here: https://github.com/Chia-Network/pool-reference
 ## Why don't we give documentation or support dev preview of pooling code?
 We don't support dev preview of pooling code for a few reasons: 1) it's work in progress, and will continue to change as we get closer to launch; 2) we need devs focused on completing the 1.0 version of pooling code, and every question that they take time to answer increases the chances we will slip; 3) pooling is a very complicated set of software not meant for inexperienced coders to get involved with. The pooling code is not a turn-key solution without additional  development efforts from the pool operator, and generally speaking, if this question is relevant to you then odds are you do not have the existing experience needed to successfully (and securely) run a pool unassisted at this time.
 
+## When is the next Zoom Technical Q&A on Pooling?
+There will be a Technical Q&A with the 3 core devs responsible for official Chia pooling support next Wednesday, June 2 from 09:00-10:00 AM US Pacific Daylight Time (PDT). Please mark your calendars. Zoom link will be provided early next week.
+
 # Features Requests to Devs
 
 No new feature requests taken at this time.
