@@ -165,7 +165,46 @@ No new feature requests taken at this time.
 
 # Outstanding Questions to Devs
 
-All caught up at the moment!
+keybase://chat/chia_network.public#pools/10099
+Hi guys, I'm a developer and I want to create my own Chia Pool. As the Pool Reference I found on github (https://github.com/Chia-Network/pool-reference/), I saw that Chia will create singleton and pool server for receiving proof from farmers and adjusting difficulty for coressponding farmers. So we'll have something like "pool service", similar to current "farmer service", "harvester service",... when pool protocol official released ? if I get it right, everything I need to do is monitoring and managing farmer with customizing pool reference, and I don't need (or cannot) change any thing about singleton (like pool puzzle logic in a clvm file) or any functions in pool server ?
+
+keybase://chat/chia_network.public#pools/10107
+I have a question, which I feel has been answered before: There has been discussion about farmers having a minimum size in order to join a pool (eg. 2-3TB in order to submit 1 Proof/5 Minutes). Would it be an option for the future to lower the lowest difficulty even further in order to potentially allow a single k32 plot to submit 300 partials/day?
+
+keybase://chat/chia_network.public#pools/10116
+Is it allowed to have "chia" in subdomain or path, i.e. chia.mypool.com/stats or mypool.com/chia/stats ? Would that require a license?
+
+keybase://chat/chia_network.public#pools/10117
+End of month is getting closer, when we can start plotting portable plots ?
+
+keybase://chat/chia_network.public#pools/10150
+I have a question.
+What does the pool operate?
+
+keybase://chat/chia_network.public#pools/10179
+So will pooling for the end user only be available around mid June-July right?
+
+keybase://chat/chia_network.public#pools/10190
+What will happen with testnet portable plots when it goes on mainnet on mid of june? Can i keep them or need to be reploted?
+
+keybase://chat/chia_network.public#pools/10193
+btw can i ask what happened to the pool for the delay?
+
+keybase://chat/chia_network.public#pools/10199
+if i joined testnet,those portable plots can be continue to be used after mainnet launches the update?
+
+keybase://chat/chia_network.public#pools/10206
+is pooling already available in testnet?if like this maby i'll join and test
+
+keybase://chat/chia_network.public#pools/10252
+2) Another question is: I read something before along the line of: "there will be 2 pool mechanisms, one for where the plots are bound to a fixed pool-id and another portable plots version, where anonymity isn't completely given" ... I can't find the source anymore, but is the fixed pool-id version still around ?
+
+keybase://chat/chia_network.public#pools/10256
+Back to the actual pooling protocol: Can someone confirm my understanding of difficulty with regards to pool: 1) Pools adjust difficulty based on how many proofs the farmer is sending in to try to keep the proof interval at the (suggested) 5 minutes per proof (I understand pools can adjust it to be whatever interval they want but 5 minutes is the suggested interval). 2) This difficulty is the only measure the pool has of how much space the farmer has plotted.
+
+keybase://chat/chia_network.public#pools/10257
+3) Current mainnet plots do have a pool-id, is this pool-id still relevant when portable plots are launched ? E.g. if I use my plots for my own pool and have others join mine, can I keep my current plots ?
+
 
 # Draft FAQ Items
 
