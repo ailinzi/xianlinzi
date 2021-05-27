@@ -1,6 +1,6 @@
 # Chia keys management
 The purpose of this page is to provide guidance on how to setup Chia keys for plotting, farming, receiving rewards and managing your wallet.
-It does not explain the Chia Keys Architecture. You can find this explanation here:[Chia Keys Architecture](https://github.com/Chia-Network/chia-blockchain/wiki/Chia-Keys-Architecture).
+It does not explain the Chia Keys Architecture. You can find this explanation here: [Chia Keys Architecture](https://github.com/Chia-Network/chia-blockchain/wiki/Chia-Keys-Architecture).
 It is mostly CLI focused; sorry GUI users.
 
 ## 1 key (default)
