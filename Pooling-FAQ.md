@@ -168,7 +168,8 @@ No new feature requests taken at this time.
 
 # Outstanding Questions to Devs
 
-All caught up at the moment!
+felixbrucker - keybase://chat/chia_network.public#pools/10430
+quick question: cant we run our own private testnet to confirm wins with a single pool plot? i have not taken a look at this scenario yet, but it should be possible to run all required components from within the chia-blockchain code, right?
 
 # Draft FAQ Items
 
