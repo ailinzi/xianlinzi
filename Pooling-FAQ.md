@@ -9,7 +9,7 @@
 
 ## When will Chia official pooling software be released?
 
-Launch of pools us continuing to move forward steadily. We first need to launch it on testnet for integration testing. Afterwards, pool operators will need time to adapt their pooling code to use Chia's method to calculate farmer's share, collect to pool wallet, and distribute XCH to pool participants. For non-developers, reference code is just that, a reference to use when building your own solution. It is not a turn-key solution someone can immediately deploy and run without the right skillset, time, and effort to make the modifications needed for your own use.
+Launch of pools is continuing to move forward steadily. We first need to launch it on testnet for integration testing. Afterwards, pool operators will need time to adapt their pooling code to use Chia's method to calculate farmer's share, collect to pool wallet, and distribute XCH to pool participants. For non-developers, reference code is just that, a reference to use when building your own solution. It is not a turn-key solution someone can immediately deploy and run without the right skillset, time, and effort to make the modifications needed for your own use.
 
 ## How can I participate in testnet?
 testnet is specifically designed for only programmers and technical testers to participate in. When we do release Chia official pooling software to testnet, we will provide enough instructions that experienced technical testers can do it. It won't be easily accessible for the average consumer and we will not provide support.
