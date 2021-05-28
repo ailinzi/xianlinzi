@@ -188,6 +188,9 @@ Client apps will need to have a place for me to register an endpoint for submitt
 j1mb0 - keybase://chat/chia_network.public#pools/10602
 Question: In the pool server reference code there is this line: self.wallet_rpc_client.log_in_and_skip, which makes calls to "host": "https://backup.chia.net" which I gather is a key management solution for storing wallet keys. I am assuming this is not intended for production and Chia devs intend for pool operators to replace it with our own key management of choice?
 
+alexfp - keybase://chat/pooloperators#general/81
+Thank you @efishcent. I have one question regarding the pooling protocol. How Plot ID is dervied from /submitPartial data?
+
 # Draft FAQ Items
 
 Important Keybase conversations captured that needs to be converted to FAQ items. All items below will be cleaned up, this is just a place to temporarily cut and paste conversations in Keybase as a place holder:
