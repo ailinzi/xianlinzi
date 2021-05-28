@@ -171,6 +171,17 @@ No new feature requests taken at this time.
 felixbrucker - keybase://chat/chia_network.public#pools/10430
 quick question: cant we run our own private testnet to confirm wins with a single pool plot? i have not taken a look at this scenario yet, but it should be possible to run all required components from within the chia-blockchain code, right?
 
+zelgada - keybase://chat/chia_network.public#pools/10481
+Hi @efishcent - I note that the pool-reference code is receiving the partials in pool_server.py, however- I was confused about this part in the farmer code:
+
+In the as-is client, you can see here https://github.com/Chia-Network/chia-blockchain/blob/34caa75f99547c3dae394cefb4dfa2bc34b93dc4/chia/farmer/farmer_api.py#L176 that the pool private key used to sign the pool_target_signature, and added to the DeclareProofOfSpace message.  I note that in some branches, this code has changed.
+
+The ms.pooling branch makes some changes.  Specifically, I see that the code has changed but the pool target signature is still using the pool private key for a signature.  https://github.com/Chia-Network/chia-blockchain/blob/4788c616165388ebae786a7f06d04fd0cf892e30/chia/farmer/farmer_api.py#L302
+
+Will this not fail on line 295, when the farmer discovers not to have the pool private key?
+
+Why is this even needed?
+
 # Draft FAQ Items
 
 Important Keybase conversations captured that needs to be converted to FAQ items. All items below will be cleaned up, this is just a place to temporarily cut and paste conversations in Keybase as a place holder:
