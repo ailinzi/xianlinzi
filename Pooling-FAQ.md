@@ -182,6 +182,9 @@ Will this not fail on line 295, when the farmer discovers not to have the pool p
 
 Why is this even needed?
 
+alex_fx - keybase://chat/chia_network.public#pools/10513
+Client apps will need to have a place for me to register an endpoint for submitting partial Proof right? (the endpoint is an api of the pool receiving the partial proof) Can pool server specify to Client the endpoint URL?
+
 # Draft FAQ Items
 
 Important Keybase conversations captured that needs to be converted to FAQ items. All items below will be cleaned up, this is just a place to temporarily cut and paste conversations in Keybase as a place holder:
