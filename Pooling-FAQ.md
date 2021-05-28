@@ -185,6 +185,9 @@ Why is this even needed?
 alex_fx - keybase://chat/chia_network.public#pools/10513
 Client apps will need to have a place for me to register an endpoint for submitting partial Proof right? (the endpoint is an api of the pool receiving the partial proof) Can pool server specify to Client the endpoint URL?
 
+j1mb0 - keybase://chat/chia_network.public#pools/10602
+Question: In the pool server reference code there is this line: self.wallet_rpc_client.log_in_and_skip, which makes calls to "host": "https://backup.chia.net" which I gather is a key management solution for storing wallet keys. I am assuming this is not intended for production and Chia devs intend for pool operators to replace it with our own key management of choice?
+
 # Draft FAQ Items
 
 Important Keybase conversations captured that needs to be converted to FAQ items. All items below will be cleaned up, this is just a place to temporarily cut and paste conversations in Keybase as a place holder:
