@@ -14,7 +14,7 @@ The Chia pool reference code will be released to Testnet by end of May, 2021. Af
 testnet is specifically designed for only programmers and technical testers to participate in. When we do release Chia official pooling software to testnet, we will provide enough instructions that experienced technical testers can do it. It won't be easily accessible for the average consumer and we will not provide support.
 
 ## Will I need to replot to use the official pooling protocol?
-Yes. Anyone who wants to join a pool will need to create new K32 or above portable plots. This new plot format allows you to switch between pools and self-pooling with a cooldown of 30 minutes (rules set by pool) between each switch. Each switch between pools will require a transaction with a smart contract on the blockchain. Our recommendation is to slowly replace your existing plots with portable plots one by one, so you still have a chance to win XCH while you convert to all portable plots.
+Yes. Anyone who wants to join a pool will need to create new K32 or above portable plots. This new plot format allows you to switch between pools and self-pooling with a cooldown of ~30 minutes (100 blocks) between each switch. Each switch between pools will require a transaction with a smart contract on the blockchain. Our recommendation is to slowly replace your existing plots with portable plots one by one, so you still have a chance to win XCH while you convert to all portable plots.
 
 ## Will I need pay XCH to switch pools?
 Yes. It will require 1 mojo (1 trillionth of a XCH) to switch pools. The mojo is used to make a transaction with a smart contract on the blockchain. For those who don't have any XCH, you can get 100 mojos from Chia's official faucet: https://faucet.chia.net/
