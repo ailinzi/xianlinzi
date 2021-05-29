@@ -202,6 +202,9 @@ Contribute to Chia-Network/pool-reference development by creating an account on 
 just to clarify, i will probbaly run the api and frontend on different subdomains
 providing the login url /base url could be as simple as adding a pool info field for it
 
+alexfp - keybase://chat/pooloperators#general/93
+Also, the proof actual difficulty is calculated by 2**256/quality, right?
+
 # Draft FAQ Items
 
 Important Keybase conversations captured that needs to be converted to FAQ items. All items below will be cleaned up, this is just a place to temporarily cut and paste conversations in Keybase as a place holder:
