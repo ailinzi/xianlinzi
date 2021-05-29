@@ -200,6 +200,7 @@ Chia-Network/pool-reference
 Contribute to Chia-Network/pool-reference development by creating an account on GitHub. 
 
 just to clarify, i will probbaly run the api and frontend on different subdomains
+providing the login url /base url could be as simple as adding a pool info field for it
 
 # Draft FAQ Items
 
