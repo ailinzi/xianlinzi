@@ -192,9 +192,6 @@ Question: In the pool server reference code there is this line: self.wallet_rpc_
 alexfp - keybase://chat/pooloperators#general/81
 Thank you @efishcent. I have one question regarding the pooling protocol. How Plot ID is dervied from /submitPartial data?
 
-altendky - keybase://chat/chia_network.public#pools/10726
-will pool plots have identifiable file names?  in general it would be handy to be able to specify a custom tag to be added to file names for tracking them...  --user-tag myid1234 or such.
-
 # Draft FAQ Items
 
 Important Keybase conversations captured that needs to be converted to FAQ items. All items below will be cleaned up, this is just a place to temporarily cut and paste conversations in Keybase as a place holder:
