@@ -192,6 +192,15 @@ Question: In the pool server reference code there is this line: self.wallet_rpc_
 alexfp - keybase://chat/pooloperators#general/81
 Thank you @efishcent. I have one question regarding the pooling protocol. How Plot ID is dervied from /submitPartial data?
 
+felixbrucker - keybase://chat/chia_network.public#pools/10763
+I got a question regarding the login route / login flow: https://github.com/Chia-Network/pool-reference/blob/25708b29f09c3a65320731d9211ba413232df12f/SPECIFICATION.md#flow
+it says here the pool url is used, would that be the same url that is used for partials and get info? id prefer it wasnt fixed to that, because that part would be api while the login would be handled by frontend code, well for me at least
+GitHub
+Chia-Network/pool-reference
+Contribute to Chia-Network/pool-reference development by creating an account on GitHub. 
+
+just to clarify, i will probbaly run the api and frontend on different subdomains
+
 # Draft FAQ Items
 
 Important Keybase conversations captured that needs to be converted to FAQ items. All items below will be cleaned up, this is just a place to temporarily cut and paste conversations in Keybase as a place holder:
