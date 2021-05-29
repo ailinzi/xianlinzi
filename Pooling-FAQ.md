@@ -190,7 +190,7 @@ j1mb0 - keybase://chat/chia_network.public#pools/10602
 Question: In the pool server reference code there is this line: self.wallet_rpc_client.log_in_and_skip, which makes calls to "host": "https://backup.chia.net" which I gather is a key management solution for storing wallet keys. I am assuming this is not intended for production and Chia devs intend for pool operators to replace it with our own key management of choice?
 
 alexfp - keybase://chat/pooloperators#general/81
-Thank you @efishcent. I have one question regarding the pooling protocol. How Plot ID is dervied from /submitPartial data?
+Thank you @efishcent. I have one question regarding the pooling protocol. How Plot ID is dervied from /submitPartial data? If I'm not wrong, the Plot ID is required for the partial verification.
 
 felixbrucker - keybase://chat/chia_network.public#pools/10763
 I got a question regarding the login route / login flow: https://github.com/Chia-Network/pool-reference/blob/25708b29f09c3a65320731d9211ba413232df12f/SPECIFICATION.md#flow
