@@ -205,6 +205,9 @@ providing the login url /base url could be as simple as adding a pool info field
 alexfp - keybase://chat/pooloperators#general/93
 Also, the proof actual difficulty is calculated by 2**256/quality, right?
 
+migueloco - keybase://chat/chia_network.public#pools/10891
+I saw that several programmers presented a beta wallet that allows the plots to change the pool, we are developing a pool and we cannot find that wallet in the public repositories, how can we have access to this wallet? since we need it to test the pool. Thank you so much
+
 # Draft FAQ Items
 
 Important Keybase conversations captured that needs to be converted to FAQ items. All items below will be cleaned up, this is just a place to temporarily cut and paste conversations in Keybase as a place holder:
