@@ -1,3 +1,11 @@
+# Security Considerations
+
+Exposing a chia daemon to the network is an advanced configuration. It allows other computers to communicate with the chia daemon, including the ability to create transactions and send XCH.
+
+If you do not know how configure and properly secure a computer network _do not_ use a remote daemon.
+
+*Never* expose the chia daemon to the internet.
+
 # Setup
 
 For a Linux based farmer and Windows GUI. The same concept apply for other OS combinations.
