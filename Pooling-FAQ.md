@@ -18,7 +18,7 @@ testnet is specifically designed for only programmers and technical testers to p
 Yes. Anyone who wants to join a pool will need to create new K32 or above portable plots. This new plot format allows you to switch between pools and self-pooling with a cooldown of ~30 minutes (100 blocks) between each switch. Each switch between pools will require a transaction with a smart contract on the blockchain. Our recommendation is to slowly replace your existing plots with portable plots one by one, so you still have a chance to win XCH while you convert to all portable plots.
 
 ## When can I start creating portable plots?
-Support for portable plots will be released sometime in June on testnet. If you are OK with potential bugs found in testing that may require to replot, you are free to try it. Otherwise we recommend you wait for mainnet launch.
+Support for portable plots will be released sometime in June on testnet. If you are OK with high chance bugs found in testing that may require to replot, you are free to try it. Otherwise we recommend you wait for mainnet launch.
 
 ## Will I need pay XCH to switch pools?
 Yes. It will require 1 mojo (1 trillionth of a XCH) to switch pools. The mojo is used to make a transaction with a smart contract on the blockchain. For those who don't have any XCH, you can get 100 mojos from Chia's official faucet: https://faucet.chia.net/
