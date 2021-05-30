@@ -205,6 +205,10 @@ providing the login url /base url could be as simple as adding a pool info field
 alexfp - keybase://chat/pooloperators#general/93
 Also, the proof actual difficulty is calculated by 2**256/quality, right?
 
+cccat - keybase://chat/chia_network.public#pools/10913
+A question. Is /login navigating to browser or will be display in the Chia GUI? Where did the client get login_code? Thanks!
+Is login_code just in the Set-Cookies of /partials response?
+
 migueloco - keybase://chat/chia_network.public#pools/10891
 I saw that several programmers presented a beta wallet that allows the plots to change the pool, we are developing a pool and we cannot find that wallet in the public repositories, how can we have access to this wallet? since we need it to test the pool. Thank you so much
 
