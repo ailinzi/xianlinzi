@@ -215,6 +215,9 @@ Is login_code just in the Set-Cookies of /partials response?
 janit - keybase://chat/chia_network.public#pools/11538
 Will the new plotter only create portable plots? (Don't have any reason to see why anyone'd want OG, but just checking)
 
+willi123yao - keybase://chat/chia_network.public#pools/11595
+In most other PoW coins, the payout for shares is based on the ratio of difficulty contributed to the network difficulty of the coin at the time of share submission. (d/D, where d is the share difficulty and D is the network difficulty at the time of share submission). This value is then manipulated by multiplying by the block reward and dividing by a pool constant
+
 # Draft FAQ Items
 
 Important Keybase conversations captured that needs to be converted to FAQ items. All items below will be cleaned up, this is just a place to temporarily cut and paste conversations in Keybase as a place holder:
