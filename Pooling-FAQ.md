@@ -212,6 +212,9 @@ cccat - keybase://chat/chia_network.public#pools/10913
 A question. Is /login navigating to browser or will be display in the Chia GUI? Where did the client get login_code? Thanks!
 Is login_code just in the Set-Cookies of /partials response?
 
+janit - keybase://chat/chia_network.public#pools/11538
+Will the new plotter only create portable plots? (Don't have any reason to see why anyone'd want OG, but just checking)
+
 # Draft FAQ Items
 
 Important Keybase conversations captured that needs to be converted to FAQ items. All items below will be cleaned up, this is just a place to temporarily cut and paste conversations in Keybase as a place holder:
