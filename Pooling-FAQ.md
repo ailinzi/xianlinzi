@@ -217,6 +217,7 @@ Will the new plotter only create portable plots? (Don't have any reason to see w
 
 willi123yao - keybase://chat/chia_network.public#pools/11595
 In most other PoW coins, the payout for shares is based on the ratio of difficulty contributed to the network difficulty of the coin at the time of share submission. (d/D, where d is the share difficulty and D is the network difficulty at the time of share submission). This value is then manipulated by multiplying by the block reward and dividing by a pool constant
+PPS might result in certain issues with unfair payouts, since the network block time is largely below the partial proof time (19 seconds vs 5 mins), and in a rare but still likely situation of consecutive block wins by the pool, rewards could be fully taken by a small farmer who was lucky to submit 1 share in the 19 second window
 
 # Draft FAQ Items
 
