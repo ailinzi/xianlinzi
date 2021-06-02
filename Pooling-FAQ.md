@@ -169,7 +169,9 @@ No new feature requests taken at this time.
 
 # Outstanding Questions to Devs
 
-All caught up at the moment!
+- how the pooling harvester will work
+- how the pooling singleton will work
+- Why is the escape time something a pool can define? Why not a fixed value?
 
 # Draft FAQ Items
 
