@@ -169,55 +169,6 @@ No new feature requests taken at this time.
 
 # Outstanding Questions to Devs
 
-felixbrucker - keybase://chat/chia_network.public#pools/10430
-quick question: cant we run our own private testnet to confirm wins with a single pool plot? i have not taken a look at this scenario yet, but it should be possible to run all required components from within the chia-blockchain code, right?
-
-zelgada - keybase://chat/chia_network.public#pools/10481
-Hi @efishcent - I note that the pool-reference code is receiving the partials in pool_server.py, however- I was confused about this part in the farmer code:
-
-In the as-is client, you can see here https://github.com/Chia-Network/chia-blockchain/blob/34caa75f99547c3dae394cefb4dfa2bc34b93dc4/chia/farmer/farmer_api.py#L176 that the pool private key used to sign the pool_target_signature, and added to the DeclareProofOfSpace message.  I note that in some branches, this code has changed.
-
-The ms.pooling branch makes some changes.  Specifically, I see that the code has changed but the pool target signature is still using the pool private key for a signature.  https://github.com/Chia-Network/chia-blockchain/blob/4788c616165388ebae786a7f06d04fd0cf892e30/chia/farmer/farmer_api.py#L302
-
-Will this not fail on line 295, when the farmer discovers not to have the pool private key?
-
-Why is this even needed?
-
-alex_fx - keybase://chat/chia_network.public#pools/10513
-Client apps will need to have a place for me to register an endpoint for submitting partial Proof right? (the endpoint is an api of the pool receiving the partial proof) Can pool server specify to Client the endpoint URL?
-
-j1mb0 - keybase://chat/chia_network.public#pools/10602
-Question: In the pool server reference code there is this line: self.wallet_rpc_client.log_in_and_skip, which makes calls to "host": "https://backup.chia.net" which I gather is a key management solution for storing wallet keys. I am assuming this is not intended for production and Chia devs intend for pool operators to replace it with our own key management of choice?
-
-alexfp - keybase://chat/pooloperators#general/81
-Thank you @efishcent. I have one question regarding the pooling protocol. How Plot ID is dervied from /submitPartial data? If I'm not wrong, the Plot ID is required for the partial verification.
-
-felixbrucker - keybase://chat/chia_network.public#pools/10763
-I got a question regarding the login route / login flow: https://github.com/Chia-Network/pool-reference/blob/25708b29f09c3a65320731d9211ba413232df12f/SPECIFICATION.md#flow
-it says here the pool url is used, would that be the same url that is used for partials and get info? id prefer it wasnt fixed to that, because that part would be api while the login would be handled by frontend code, well for me at least
-GitHub
-Chia-Network/pool-reference
-Contribute to Chia-Network/pool-reference development by creating an account on GitHub. 
-
-just to clarify, i will probbaly run the api and frontend on different subdomains
-providing the login url /base url could be as simple as adding a pool info field for it
-
-alexfp - keybase://chat/pooloperators#general/93
-Also, the proof actual difficulty is calculated by 2**256/quality, right?
-
-migueloco - keybase://chat/chia_network.public#pools/10891
-I saw that several programmers presented a beta wallet that allows the plots to change the pool, we are developing a pool and we cannot find that wallet in the public repositories, how can we have access to this wallet? since we need it to test the pool. Thank you so much
-
-cccat - keybase://chat/chia_network.public#pools/10913
-A question. Is /login navigating to browser or will be display in the Chia GUI? Where did the client get login_code? Thanks!
-Is login_code just in the Set-Cookies of /partials response?
-
-janit - keybase://chat/chia_network.public#pools/11538
-Will the new plotter only create portable plots? (Don't have any reason to see why anyone'd want OG, but just checking)
-
-willi123yao - keybase://chat/chia_network.public#pools/11595
-In most other PoW coins, the payout for shares is based on the ratio of difficulty contributed to the network difficulty of the coin at the time of share submission. (d/D, where d is the share difficulty and D is the network difficulty at the time of share submission). This value is then manipulated by multiplying by the block reward and dividing by a pool constant
-PPS might result in certain issues with unfair payouts, since the network block time is largely below the partial proof time (19 seconds vs 5 mins), and in a rare but still likely situation of consecutive block wins by the pool, rewards could be fully taken by a small farmer who was lucky to submit 1 share in the 19 second window
 
 # Draft FAQ Items
 
