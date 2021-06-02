@@ -18,10 +18,10 @@ testnet is specifically designed for only programmers and technical testers to p
 Yes. Anyone who wants to join a pool will need to create new K32 or above portable plots. This new plot format allows you to switch between pools and self-pooling with a cooldown of ~30 minutes (100 blocks) between each switch. Each switch between pools will require a transaction with a smart contract on the blockchain. Our recommendation is to slowly replace your existing plots with portable plots one by one, so you still have a chance to win XCH while you convert to all portable plots.
 
 ## When can I start creating portable plots?
-Support for portable plots will be released sometime in June on testnet. Testnet portable plots are focused on finding bugs. It is highly unlikely testnet portable plots will work in mainnet. If you are willing to risk replotting, you are free to try it on testnet. Otherwise we recommend you wait for mainnet launch before plotting portable plots.
+Support for portable plots will be released sometime in June on testnet. Testnet portable plots are focused on finding bugs and cannot be used in mainnet. Using testnet code to create mainnet portable plots carries huge risk that bugs in the smart contract will make the plots non-viable and require replotting. We recommend you wait for mainnet launch before plotting portable plots.
 
-## Will I need pay XCH to switch pools?
-Yes. It will require 1 mojo (1 trillionth of a XCH) to switch pools. The mojo is used to make a transaction with a smart contract on the blockchain. For those who don't have any XCH, you can get 100 mojos from Chia's official faucet: https://faucet.chia.net/
+## Will I need pay XCH to create a Pool NFT or switch pools?
+Each Pool NFT you create will require a minimum of 1 mojo (1 trillionth of a XCH) + transaction fee. For switching pools, you need to pay only a transaction fee. to switch pools. On the first few days of pool launch on mainnet, it's likely you can use 0 transaction fee. For those who don't have any XCH, you can get 100 mojos from Chia's official faucet: https://faucet.chia.net/
 
 ## Can I farm with both OG (original) plots and portable plots?
 Yes. The farmer will support both OG plots and portable plots on one machine.
@@ -45,7 +45,7 @@ You can only advertise your pool in Keybase @chia_network.public#pools once a da
 Hpool has created their own version of Chia client that has no source code released with it. There is no telling what kind of malicious activity that client can do. Chia Network Inc discourages everyone from joining any pool that requires custom closed source clients.
 
 ## Why doesn't Chia run their own official pool?
-To run a good pool takes a lot of effort, and it's not Chia Network Inc core business. There's a strong ecosystem of pool developers and operators who would love to take on this challenge, so it just makes sense to allow the community to run pools.
+We want there to be a healthy ecosystem of competing pools with no privileged official one having an unfair advantage over the others.
 
 ## Can I name my pool chiapool.com?
 We are not going to allow pools to use "Chia" as the first word or its equivalent (the chia pool). You can say things like "a Chia pool" though that will probably need a free and easy to get license. Go to https://www.chia.net/terms/ to get more information on obtaining a license.
