@@ -171,9 +171,14 @@ No new feature requests taken at this time.
 
 # Outstanding Questions to Devs
 
+
+chris222 - keybase://chat/chia_network.public#pools/12180
 - how the pooling harvester will work
 - how the pooling singleton will work
 - Why is the escape time something a pool can define? Why not a fixed value?
+
+xch_pool - keybase://chat/chia_network.public#pools/12947
+Q: is there any kind of estimate how many partials the current reference code can check per second on a single CPU thread on lets say a recent i7?
 
 # Draft FAQ Items
 
