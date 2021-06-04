@@ -53,7 +53,7 @@ Since beta27, the CA files are copied to each harvester, as the daemon currently
 
 *Note:*
 
-Currently (mainnet), the GUI doesn't show harvester plots. The best way to see if it's working is shut down Chia full node and set your logging level to `DEBUG` in your `config.yaml` on your main machine and restart Chia full node. Now you can check the log `~/.chia/mainnet/log/debug.log` and see if you get messages like the following:
+Currently (mainnet), the GUI doesn't show harvester plots. The best way to see if it's working is shut down Chia full node and set your logging level to `DEBUG` in your `config.yaml` on your main machine and restart Chia farmer(`chia start -r farmer`). Now you can check the log `~/.chia/mainnet/log/debug.log` and see if you get messages like the following:
  ```
 [time stamp] farmer farmer_server   : DEBUG   -> new_signage_point_harvester to peer [harvester IP address] [peer id - 64 char hexadecimal]
 [time stamp] farmer farmer_server   : DEBUG   <- farming_info from peer [peer id - 64 char hexadecimal] [harvester IP address]
